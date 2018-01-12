@@ -13,7 +13,6 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/language-service": "^5.1.0",
     "@angular/cli": "^1.6.4",
     "@angular/animations": "^5.2.0",
     "@angular/cdk": "^5.0.4",
@@ -35,9 +34,9 @@
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
-    "@angular/language-service": "^5.1.0",
     "@angular/cli": "^1.6.4",
     "@angular/compiler-cli": "^5.2.0",
+    "@angular/language-service": "^5.1.0",
     "@types/jasmine": "~2.8.3",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
