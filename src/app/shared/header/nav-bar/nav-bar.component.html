@@ -1,0 +1,20 @@
+<mat-nav-list  fxLayout="row" fxLayoutAlign="end center">
+    <button mat-button>Home </button>
+    <button mat-button [matMenuTriggerFor]="service">Service</button>
+        <mat-menu #service="matMenu">
+            <button mat-menu-item>Priest</button>
+            <button mat-menu-item>Food Catering</button>
+            <button mat-menu-item>Hall Booking</button>
+            <button mat-menu-item>Hall Decoration</button>
+        </mat-menu>
+    <button  mat-button [matMenuTriggerFor]="gallery">Gallery</button>
+        <mat-menu #gallery="matMenu">
+            <button mat-menu-item>Picture</button>
+            <button mat-menu-item>Video</button>
+            <button mat-menu-item>Musics</button>
+            <button mat-menu-item>Books</button>
+        </mat-menu>
+    <button  mat-button>About Us</button>
+    <button  mat-button>Contact Us</button>
+    <button  mat-button>Membership</button>
+ </mat-nav-list>

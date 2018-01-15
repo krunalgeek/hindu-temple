@@ -1,0 +1,16 @@
+@import '~@angular/material/theming';
+$font-family: 'Roboto, monospace';
+$headline: mat-typography-level(32px, 48px, 700);
+$body-1: mat-typography-level(16px, 24px, 500);
+$nav-primary: mat-typography-level(18px, 24px, 700);
+$white-paper-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+$white: #ffffff;
+$blue: #3f51b5;
+
+////////////////// Home Page////////////////////////
+$home-red: #FF0467;
+$home-orange: #FC7437;
+$homePageGradient : $home-red 0%, $home-orange 100%;
+$direction: -134deg;
+$gradientColor : $home-red 0%, $home-orange 100%;
+$primary-heading-color:#FF0467;

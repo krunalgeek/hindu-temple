@@ -1,0 +1,27 @@
+<div class="container">
+    <div id='homeHeroCarousel'  fxLayout="row" fxLayoutAlign="center center">
+        <ngx-carousel fxFlex="75" 
+            fxFlex.lt-md="100"
+            [inputs]="carouselBanner"
+            ngStyle.xs="max-height: 260px;" 
+            ngStyle.sm="max-height: 380px;" 
+            [moveToSlide]="1"
+            (onMove)="onmoveFn($event)">
+            <ngx-item NgxCarouselItem class="hinduTempleCarousel" *ngFor="let img of carouselBannerItems">
+                <img class="hinduTempleCarousel" src="{{img}}">
+            </ngx-item>
+            <button NgxCarouselPrev class='leftArr' mat-mini-fab fxHide fxHide.lt-md="false">
+                <mat-icon aria-label="left button for left side image">keyboard_arrow_left</mat-icon>
+            </button>
+            <button NgxCarouselPrev class='leftArr' mat-fab fxHide fxHide.gt-sm="false">
+                <mat-icon aria-label="left button for left side image">keyboard_arrow_left</mat-icon>
+            </button>
+            <button NgxCarouselNext class='rightArr'mat-mini-fab fxHide fxHide.lt-md="false">
+                <mat-icon aria-label="right button for right side image">keyboard_arrow_right</mat-icon>
+            </button>
+            <button NgxCarouselNext class='rightArr' mat-fab fxHide fxHide.gt-sm="false">
+                <mat-icon aria-label="right button for right side image">keyboard_arrow_right</mat-icon>
+            </button>
+         </ngx-carousel>
+    </div>
+</div>

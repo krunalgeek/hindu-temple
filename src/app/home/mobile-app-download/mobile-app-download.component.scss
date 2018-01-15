@@ -1,0 +1,46 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+#mobAppAvailable {
+    margin:10px auto; 
+    overflow: hidden;
+    #titleForMobAppAvailable {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        h1 {
+            color: $primary-heading-color;
+            text-shadow: 0 1px 16px rgba(29, 27, 27, 0.4);
+            border-bottom: 3px $home-red dashed;
+            text-align: center;
+            display: inline;   
+        }
+    }
+    .btn-container {
+        a {
+            box-sizing: border-box;
+            margin: 10px;
+            img {
+                width: 124px;
+                height: auto;
+            }
+        }
+    }
+    .mobile-container {
+        .phones-img-continer {
+            position: relative;
+            text-align: center;
+            img {
+                width: 160px;
+                position: relative;
+                &#androidImg {
+                    left: -20px;
+                }
+                &#appleImg {
+                    right: -30px;
+                    z-index: 2;
+                }
+            }
+            
+        }
+    }
+}

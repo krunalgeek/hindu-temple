@@ -1,0 +1,152 @@
+<section id="appHeader">
+  <div class="container">
+    <div fxLayout="row" class="alllinks" fxHide fxHise.gt-xs="false">
+        <div class="useFullLinks">
+          <h3 class="mat-title">Useful Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Catering</a></li>
+            <li><a href="#">Decoration</a></li>
+            <li><a href="#">Hall Rental</a></li>
+            <li><a href="#">Preist Service</a></li>
+            <li><a href="#">Bhajan</a></li>
+            <li><a href="#">Religious Books</a></li>
+            <li><a href="#">Videos from Past events</a></li>
+            <li><a href="#">Images from Past events</a></li>
+          </ul>
+        </div>
+        <div class="supportLinks">
+          <h3 class="mat-title">Useful Links</h3>
+          <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Membership Form</a></li>
+            <li><a href="#">Volunter Form</a></li>
+            <li><a href="#">Matrimonial Form</a></li>
+            <li><a href="#">Donation</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Sign Us</a></li>
+          </ul>
+        </div>
+        <div class="socialLinks">
+          <h3 class="mat-title">Follow Us On</h3>
+          <ul>
+            <li>
+                <button mat-mini-fab class="facebook-icon">
+                  <mat-icon svgIcon="facebook"></mat-icon>
+                </button>
+            </li>
+            <li>
+                <button mat-mini-fab class="twitter-icon">
+                    <mat-icon svgIcon="twitter"></mat-icon>
+                </button>
+            </li>
+            <li>
+                <button mat-mini-fab class="google-plus-icon">
+                  <mat-icon svgIcon="google-plus"></mat-icon>
+                </button>
+            </li>
+            <li>
+                <button mat-mini-fab  class="pinterest-icon">
+                  <mat-icon svgIcon="pinterest"></mat-icon>
+                </button>
+            </li>
+            <li>
+              <button mat-mini-fab class="youtube-icon" >
+                <mat-icon svgIcon="youtube"></mat-icon>
+              </button>
+            </li>
+            <li>
+              <button mat-mini-fab class="instagram-icon">
+                <mat-icon svgIcon="instagram"></mat-icon>
+              </button>
+            </li>
+          </ul>
+        </div>
+    </div>
+    <div fxLayout="column" class="mbALlLinks">
+        <mat-accordion>
+            <mat-expansion-panel id="usefullLinksForMobile">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Usefull link
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Catering</a></li>
+                  <li><a href="#">Decoration</a></li>
+                  <li><a href="#">Hall Rental</a></li>
+                  <li><a href="#">Preist Service</a></li>
+                  <li><a href="#">Bhajan</a></li>
+                  <li><a href="#">Religious Books</a></li>
+                  <li><a href="#">Videos from Past events</a></li>
+                  <li><a href="#">Images from Past events</a></li>
+                </ul>
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false" id="supportLinkForMobile">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Support links
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ul>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#">Membership Form</a></li>
+                  <li><a href="#">Volunter Form</a></li>
+                  <li><a href="#">Matrimonial Form</a></li>
+                  <li><a href="#">Donation</a></li>
+                  <li><a href="#">Login</a></li>
+                  <li><a href="#">Sign Us</a></li>
+                </ul>
+
+            </mat-expansion-panel>
+          </mat-accordion>
+          <div class="socialSharingMobile">
+              <h4 class="mat-subheading-1">
+                  Follow us on
+              </h4>
+              <ul>
+                  <li>
+                      <button mat-mini-fab class="facebook-icon">
+                        <mat-icon svgIcon="facebook"></mat-icon>
+                      </button>
+                  </li>
+                  <li>
+                      <button mat-mini-fab class="twitter-icon">
+                          <mat-icon svgIcon="twitter"></mat-icon>
+                      </button>
+                  </li>
+                  <li>
+                      <button mat-mini-fab class="google-plus-icon">
+                        <mat-icon svgIcon="google-plus"></mat-icon>
+                      </button>
+                  </li>
+                  <li>
+                      <button mat-mini-fab  class="pinterest-icon">
+                        <mat-icon svgIcon="pinterest"></mat-icon>
+                      </button>
+                  </li>
+                  <li>
+                    <button mat-mini-fab class="youtube-icon" >
+                      <mat-icon svgIcon="youtube"></mat-icon>
+                    </button>
+                  </li>
+                  <li>
+                    <button mat-mini-fab class="instagram-icon">
+                      <mat-icon svgIcon="instagram"></mat-icon>
+                    </button>
+                  </li>
+                </ul>
+          </div>
+    </div>  
+    <div  class="copyrighttxt">
+        <h4 ngClass.gt-xs="mat-title" ngClass.xs="mat-subheading-1">
+            © 2018 Incase © All Rights Reserved. 
+        </h4>
+        <p class="mat-body1" >
+            Site Created By Krunal Patel
+        </p>
+      </div>
+  </div>
+</section>

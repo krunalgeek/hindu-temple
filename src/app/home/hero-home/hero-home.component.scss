@@ -1,0 +1,10 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+#hero-home {
+    width: 100vw;
+    height: 50vh;
+    padding-top: 112px;
+    min-height: 420px !important;
+    margin-top:25px;
+    @include gradient($direction, $gradientColor);
+}

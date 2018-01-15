@@ -1,0 +1,24 @@
+@import '~sass/_mixins';
+@import '~sass/_variables';
+/* COLOR VARIABLES
+============================================= */
+// ie: background-image: linear-gradient(-134deg, #FF0467 0%, #FC7437 100%);
+
+.white-paper {
+    width: 100%;
+    background: $white;
+    @include mat-elevation(12);
+    margin-top: -90px;
+    padding-bottom:60px; 
+    border-radius: 20px;
+    .scrollDown {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        button {
+            @include gradient($direction, $gradientColor);
+            color: $white;
+        }
+        
+    }
+}

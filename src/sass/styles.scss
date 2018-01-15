@@ -1,10 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/theming";
-@include mat-core();
 
+
+// mat-font-size($config, $level) - Gets the font-size, based on the provided config and level.
+// mat-font-family($config) - Gets the font-family, based on the provided config.
+// mat-line-height($config, $level) - Gets the line-height, based on the provided config and level.
+// mat-font-weight($config, $level) - Gets the font-weight, based on the provided config and level.
+// mat-typography-level-to-styles($config, $level) - Mixin that takes in a configuration object and a typography level, and outputs a short-hand CSS font declaration.
+
+
+@import "~@angular/material/theming";
+@import "./_variables";
+$custom-typography: mat-typography-config(
+  $font-family: $font-family,
+  $headline: $headline,
+  $body-1: $body-1
+);
+
+@include mat-core($custom-typography);
 $custom-primary: mat-palette($mat-deep-orange);
 $custom-accent: mat-palette($mat-orange);
-
 $custom-theme: mat-light-theme($custom-primary, $custom-accent);
-
 @include angular-material-theme($custom-theme);
+// Create a config with the default typography levels.
+$config: mat-typography-config();
+
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: mat-font-family($config);
+    font-size: mat-font-size($config, body-1);
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #cccccc;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+/* =============================================
+                Container styel
+===============================================*/
+.container {
+    width:100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+@media (min-width: 576px) {
+    .container {
+        max-width: 768px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1080px;
+    }
+}
+/* =============================================
+                Align styel
+===============================================*/
+
+.text-center {
+    text-align: center
+}
+.text-right {
+    text-align: right
+}
+.text-left {
+    text-align: left
+}
