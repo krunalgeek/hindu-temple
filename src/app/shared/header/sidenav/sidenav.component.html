@@ -1,4 +1,4 @@
-<mat-list role="list">
+<!-- <mat-list role="list">
   <mat-list-item role="listitem">Home</mat-list-item>
   <mat-list-item role="listitem">Services</mat-list-item>
   <mat-list-item role="listitem">Gallery</mat-list-item>
@@ -6,4 +6,50 @@
   <mat-list-item role="listitem">Contact Us</mat-list-item>
   <mat-list-item role="listitem">Membership</mat-list-item>
 </mat-list>
+ -->
 
+
+ 
+ 
+
+
+ 
+ <div id="mob-nav-list">
+    <mat-list role="list">
+        <mat-list-item class="hind-mob-list" role="listitem">Home</mat-list-item>
+    </mat-list>
+    <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Services
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list role="list">
+            <mat-list-item role="listitem">Priest</mat-list-item>
+            <mat-list-item role="listitem">Food Catering</mat-list-item>
+            <mat-list-item role="listitem">Hall Booking</mat-list-item>
+            <mat-list-item role="listitem">Hall Decoration</mat-list-item>
+          </mat-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Gallery
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+            <mat-list role="list">
+                <mat-list-item role="listitem">Pictures</mat-list-item>
+                <mat-list-item role="listitem">Video</mat-list-item>
+                <mat-list-item role="listitem">Music</mat-list-item>
+                <mat-list-item role="listitem">Books</mat-list-item>
+              </mat-list>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-list role="list">
+          <mat-list-item class="hind-mob-list" role="listitem">About Us</mat-list-item>
+          <mat-list-item class="hind-mob-list" role="listitem">Contact US</mat-list-item>
+          <mat-list-item class="hind-mob-list" role="listitem">Membership</mat-list-item>
+      </mat-list>
+ </div>
