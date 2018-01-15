@@ -1,0 +1,23 @@
+
+<svg width="120px" height="100px" viewBox="0 0 120 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-834.000000, -2712.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="other-page" transform="translate(0.000000, 700.000000)">
+                <g id="Gallery" transform="translate(0.000000, 1163.000000)">
+                    <g id="background-and-masking" transform="translate(160.000000, 456.000000)">
+                        <g id="tiles-icon-and-text" transform="translate(72.000000, 80.000000)">
+                            <g id="Books" transform="translate(496.000000, 313.000000)">
+                                <g id="icons" transform="translate(106.000000, 0.000000)">
+                                    <path d="M65.4545455,47.0588235 L103.636364,47.0588235 L103.636364,55.8823529 L65.4545455,55.8823529 L65.4545455,47.0588235 Z M65.4545455,32.3529412 L103.636364,32.3529412 L103.636364,41.1764706 L65.4545455,41.1764706 L65.4545455,32.3529412 Z M65.4545455,61.7647059 L103.636364,61.7647059 L103.636364,70.5882353 L65.4545455,70.5882353 L65.4545455,61.7647059 Z M109.090909,0 L10.9090909,0 C4.90909091,0 0,5.29411765 0,11.7647059 L0,88.2352941 C0,94.7058824 4.90909091,100 10.9090909,100 L109.090909,100 C115.090909,100 120,94.7058824 120,88.2352941 L120,11.7647059 C120,5.29411765 115.090909,0 109.090909,0 Z M109.090909,88.2352941 L60,88.2352941 L60,11.7647059 L109.090909,11.7647059 L109.090909,88.2352941 Z" id="Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

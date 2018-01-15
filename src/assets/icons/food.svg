@@ -1,0 +1,29 @@
+
+<svg width="127px" height="127px" viewBox="0 0 127 127" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="62.5" cy="62.5" r="62.5"></circle>
+    </defs>
+    <g id="Home-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-817.000000, -1281.000000)">
+            <g id="other-page" transform="translate(0.000000, 700.000000)">
+                <g id="Services" transform="translate(0.000000, 14.000000)">
+                    <g id="services-tiles" transform="translate(211.000000, 499.000000)">
+                        <g id="service-4-+-service-3-+-service-2-Mask">
+                            <g id="food-catering" transform="translate(479.000000, 0.000000)">
+                                <g id="icons" transform="translate(128.000000, 69.000000)">
+                                    <g id="Oval-2">
+                                        <use stroke="#FFFFFF" stroke-width="2" xlink:href="#path-1"></use>
+                                        <use stroke="#979797" stroke-width="1" xlink:href="#path-1"></use>
+                                    </g>
+                                    <path d="M43.7895495,71.7172534 L57.4060467,57.3776091 L23.6294352,21.8578539 C16.1235216,29.7623929 16.1235216,42.5819336 23.6294352,50.5371427 L43.7895495,71.7172534 Z M76.411405,62.5459614 C83.7729741,66.1435401 94.1176628,63.610034 101.767921,55.5534847 C110.957854,45.8754915 112.738102,31.9918782 105.665222,24.5433703 C98.640457,17.1455326 85.4569932,18.969657 76.2189457,28.6476502 C68.5686875,36.7041995 66.162946,47.5982756 69.579099,55.3508042 L22.6190238,104.804843 L29.403215,111.94933 L62.5543336,77.1389564 L95.6573374,112 L102.441529,104.855513 L69.3385248,69.9944693 L76.411405,62.5459614 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

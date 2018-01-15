@@ -1,0 +1,24 @@
+
+<svg width="120px" height="100px" viewBox="0 0 120 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-340.000000, -2399.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="other-page" transform="translate(0.000000, 700.000000)">
+                <g id="Gallery" transform="translate(0.000000, 1163.000000)">
+                    <g id="background-and-masking" transform="translate(160.000000, 456.000000)">
+                        <g id="tiles-icon-and-text" transform="translate(72.000000, 80.000000)">
+                            <g id="images" transform="translate(11.000000, 0.000000)">
+                                <g id="icons" transform="translate(97.000000, 0.000000)">
+                                    <ellipse id="Oval" cx="59.5" cy="54" rx="13.5" ry="18"></ellipse>
+                                    <path d="M42,0 L31.02,11.1111111 L12,11.1111111 C5.4,11.1111111 0,16.1111111 0,22.2222222 L0,88.8888889 C0,95 5.4,100 12,100 L108,100 C114.6,100 120,95 120,88.8888889 L120,22.2222222 C120,16.1111111 114.6,11.1111111 108,11.1111111 L88.98,11.1111111 L78,0 L42,0 Z M60,83.3333333 C43.44,83.3333333 30,70.8888889 30,55.5555556 C30,40.2222222 43.44,27.7777778 60,27.7777778 C76.56,27.7777778 90,40.2222222 90,55.5555556 C90,70.8888889 76.56,83.3333333 60,83.3333333 Z" id="Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

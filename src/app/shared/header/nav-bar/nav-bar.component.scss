@@ -1,0 +1,11 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+
+
+mat-nav-list {
+    padding-top: 0;
+    color: $white;
+    a {
+        font-size: 18px;
+    }
+}

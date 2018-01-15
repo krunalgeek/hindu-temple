@@ -1,0 +1,105 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+#upcomingEvents {
+    margin:10px auto;
+    #titleForUpcomingEvents {
+        display: flex;
+        justify-content: center;
+        h1 {
+            color: $primary-heading-color;
+            text-shadow: 0 1px 16px rgba(29, 27, 27, 0.4);
+            border-bottom: 3px $home-red dashed;
+            text-align: center;
+            display: inline;
+        }
+    }
+    mat-card {
+        margin: 20px auto;
+        .left-side-card {
+            text-align: center;
+            padding-right: 24px;
+            font-family: 'Roboto Medium', sans-serif, monospace;
+            border-right: 2px solid $home-red;
+            h4.hnd-title {
+                margin-bottom: 0;
+                color: $home-red;
+            }
+            h5.hnd-title {
+                margin-top: 0;
+            }
+            h1.hnd-heading {
+                margin:  5px auto;
+                font-size: 108px;
+                font-family: 'Roboto Medium', sans-serif, monospace;
+                line-height: 1;
+            }
+            button {
+                @include gradient($direction, $gradientColor);
+                color: $white;
+            }
+        }
+        .right-side-card {
+            font-family: 'Roboto Medium', sans-serif, monospace;
+            padding-left: 24px;
+            h4.hnd-title {
+                margin: 15px auto;
+                font-size: 20px;
+                color: $home-red;
+            }
+            a {
+                text-decoration: none;
+                color: $home-red;
+                text-transform: uppercase;
+            }
+            .mat-card-avatar {
+                margin-right: 5px;
+                background-color: $home-red;
+                color: $white;
+                font-weight: bold;
+                &.no-fb {
+                    padding: 7px;
+                }
+                &.fb-avatar {
+                    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+                    background-size: cover;
+                }
+            }
+            .fb-comment {
+                display: flex;
+                align-content: flex-end;
+            }       
+        }
+        .event-card-header {
+            text-align: center;
+            h1.hnd-mb-heading {
+                margin:  2px;
+                font-size: 64px;
+                line-height:  1;
+            }
+            h4.hnd-mb-heading {
+                margin: 0 auto;
+            }
+        }
+        .hnd-mb-title {
+            color: $home-red;
+            margin: 5px auto;
+        }
+        mat-card-actions {
+            .joinEvent, .learnMore{
+                color: $white;
+            }
+            .joinEvent {
+                background: $home-red;
+            }
+            .learnMore {
+                background: $home-orange;
+            }
+        }
+        .subscrib-email-form {
+            .subscribeme {
+                width: 100%;
+            }
+        }
+    }
+    
+}
