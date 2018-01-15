@@ -10,20 +10,20 @@ export class CarouselComponent implements OnInit {
   public carouselBanner: NgxCarousel;
   public carouselBannerItems: Array<any> = [
     {
-      'xs': 'http://placehold.it/300x200',
-      'sm': 'http://placehold.it/600x300',
-      'lg': 'http://placehold.it/800x500',
+      'xs': '../../../assets/carousel/slide-1-300-200.jpg',
+      'sm': '../../../assets/carousel/slide-1-600-300.jpg',
+      'lg': '../../../assets/carousel/slide-1-800-500.jpg',
     },
     {
-      'xs': 'http://placehold.it/300x200',
-      'sm': 'http://placehold.it/600x300',
-      'lg': 'http://placehold.it/800x500',
+      'xs': '../../../assets/carousel/slide-2-300-200.jpg',
+      'sm': '../../../assets/carousel/slide-2-600-300.jpg',
+      'lg': '../../../assets/carousel/slide-2-800-500.jpg',
     },
     {
-      'xs': 'http://placehold.it/300x200',
-      'sm': 'http://placehold.it/600x300',
-      'lg': 'http://placehold.it/800x500',
-    }
+      'xs': '../../../assets/carousel/slide-3-300-200.jpg',
+      'sm': '../../../assets/carousel/slide-3-600-300.jpg',
+      'lg': '../../../assets/carousel/slide-3-800-500.jpg',
+    },
   ];
   constructor() { }
   
@@ -83,4 +83,7 @@ export class CarouselComponent implements OnInit {
   }
 }
 
- // 'http://www.hindugodwallpaper.com/images/gods/zoom/3411_cute-bal-ganesh-wallpaper.jpg',
+
+// 'xs': 'http://placehold.it/300x200',
+// 'sm': 'http://placehold.it/600x300',
+// 'lg': 'http://placehold.it/800x500',
