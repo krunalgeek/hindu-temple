@@ -1,14 +1,19 @@
 <div class="container">
     <div id='homeHeroCarousel'  fxLayout="row" fxLayoutAlign="center center">
         <ngx-carousel fxFlex="75" 
-            fxFlex.lt-md="100"
+            fxFlex.lt-sm="75"
             [inputs]="carouselBanner"
-            ngStyle.xs="max-height: 260px;" 
-            ngStyle.sm="max-height: 380px;" 
             [moveToSlide]="1"
+            ngStyle.lt-md="margin-top: 20px;"
+            gStyle.xs="margin-top: 10px;"
+            ngStyle.md="margin-top: 35px;"
+            ngStyle.lg="margin-top: 40px;"
+            ngStyle.xl="margin-top: 45px;"
             (onMove)="onmoveFn($event)">
-            <ngx-item NgxCarouselItem class="hinduTempleCarousel" *ngFor="let img of carouselBannerItems">
-                <img class="hinduTempleCarousel" src="{{img}}">
+            <ngx-item NgxCarouselItem class="hinduTempleCarousel" *ngFor="let imgObj of carouselBannerItems">
+                <img class="hinduTempleCarousel" fxHide fxHide.xs="false"  src="{{imgObj.xs}}">
+                <img class="hinduTempleCarousel" fxHide fxHide.sm="false"  src="{{imgObj.sm}}">
+                <img class="hinduTempleCarousel" fxHide fxHide.gt-sm="false" src="{{imgObj.lg}}">
             </ngx-item>
             <button NgxCarouselPrev class='leftArr' mat-mini-fab fxHide fxHide.lt-md="false">
                 <mat-icon aria-label="left button for left side image">keyboard_arrow_left</mat-icon>

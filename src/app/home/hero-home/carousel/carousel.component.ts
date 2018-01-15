@@ -9,9 +9,21 @@ import { NgxCarousel, NgxCarouselStore } from 'ngx-carousel';
 export class CarouselComponent implements OnInit {
   public carouselBanner: NgxCarousel;
   public carouselBannerItems: Array<any> = [
-    'http://www.hindugodwallpaper.com/images/gods/zoom/3411_cute-bal-ganesh-wallpaper.jpg',
-    'http://www.hindugodwallpaper.com/images/gods/zoom/1410_bal-ganesh-wallpaper-09.jpg',
-    'http://www.hindugodwallpaper.com/images/gods/zoom/1413_bal-ganesh-wallpaper-10.jpg'
+    {
+      'xs': 'http://placehold.it/300x200',
+      'sm': 'http://placehold.it/600x300',
+      'lg': 'http://placehold.it/800x500',
+    },
+    {
+      'xs': 'http://placehold.it/300x200',
+      'sm': 'http://placehold.it/600x300',
+      'lg': 'http://placehold.it/800x500',
+    },
+    {
+      'xs': 'http://placehold.it/300x200',
+      'sm': 'http://placehold.it/600x300',
+      'lg': 'http://placehold.it/800x500',
+    }
   ];
   constructor() { }
   
@@ -70,3 +82,5 @@ export class CarouselComponent implements OnInit {
   onmoveFn(data: NgxCarouselStore) {
   }
 }
+
+ // 'http://www.hindugodwallpaper.com/images/gods/zoom/3411_cute-bal-ganesh-wallpaper.jpg',
