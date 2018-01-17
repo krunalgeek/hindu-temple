@@ -5,7 +5,10 @@
 mat-nav-list {
     padding-top: 0;
     color: $white;
-    a {
+    button {
         font-size: 18px;
+        &.active {
+            background: rgba(0,0,0,.12);
+        }
     }
 }

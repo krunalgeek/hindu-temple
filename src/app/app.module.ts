@@ -19,6 +19,12 @@ import { GalleryComponent } from './home/gallery/gallery.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListOfBodComponent } from './home/list-of-bod/list-of-bod.component';
 import { MobileAppDownloadComponent } from './home/mobile-app-download/mobile-app-download.component';
+import { PriestComponent } from './services/priest/priest.component';
+import { FoodCateringComponent } from './services/food-catering/food-catering.component';
+import { NotFoundComponent } from './shared/not-found/not-found.component';
+import { HallRentalComponent } from './services/hall-rental/hall-rental.component';
+import { DocorationsComponent } from './services/docorations/docorations.component';
+import { AppRouting } from './app.router';
 
 @NgModule({
   declarations: [
@@ -35,7 +41,12 @@ import { MobileAppDownloadComponent } from './home/mobile-app-download/mobile-ap
     OurServicesComponent,
     GalleryComponent,
     ListOfBodComponent,
-    MobileAppDownloadComponent
+    MobileAppDownloadComponent,
+    PriestComponent,
+    FoodCateringComponent,
+    NotFoundComponent,
+    HallRentalComponent,
+    DocorationsComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +54,8 @@ import { MobileAppDownloadComponent } from './home/mobile-app-download/mobile-ap
     MaterialModule,
     FlexLayoutModule,
     NgxCarouselModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRouting
   ],
   providers: [
   ],
