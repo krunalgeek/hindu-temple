@@ -18,7 +18,7 @@ ngx-carousel {
         top: 0;
         bottom: 0;
         color: $white;
-        @include gradient($direction, $gradientColor);
+        @include gradient($home-direction, $home-gradientColor);
     }
     .leftArr {
         left: 0;

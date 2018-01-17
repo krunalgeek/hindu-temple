@@ -3,5 +3,5 @@
 #hero-home {
     padding-top: 112px;
     height: 700px;
-    @include gradient($direction, $gradientColor);
+    @include gradient($home-direction, $home-gradientColor);
 }

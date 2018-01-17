@@ -1,0 +1,25 @@
+@import '~sass/_mixins';
+@import '~sass/_variables';
+/* COLOR VARIABLES
+============================================= */
+.form-container {
+    form {
+        padding: 15px;
+        @include mat-elevation(12);
+        .formTitle {
+            h3 {
+                margin: 0 auto;
+                text-align: center;
+                text-decoration: underline;
+                margin-bottom: 5px;
+                font-size: 18px;
+            }
+        }
+        .submitBtnContainer {
+            #preistSubmit {
+                @include gradient($priest-direction, $priest-gradientColor);
+                color:$white;
+            }
+        }
+    }    
+}
