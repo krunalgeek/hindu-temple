@@ -7,7 +7,7 @@ import { DocorationsComponent } from './services/docorations/docorations.compone
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { routerTransition } from './app.router.animations';
 
-const routes = [
+const appRoutes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent, data: { state: 'home' } },
     { path: 'priest', component: PriestComponent, data: { state: 'priest' } },
@@ -17,6 +17,7 @@ const routes = [
     { path: '**', component: NotFoundComponent  }
 ];
   
-export const AppRouting = RouterModule.forRoot(routes, { 
-    useHash: true
+export const AppRouting = RouterModule.forRoot(appRoutes, { 
+    useHash: false,
+    enableTracing: true
 });

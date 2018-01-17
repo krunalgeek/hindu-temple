@@ -1,25 +1,18 @@
-import {sequence, trigger, stagger, animate, style, group, query as q, transition, keyframes, animateChild} from '@angular/animations';
+import {sequence, trigger, stagger, animate, style, group, state,  query as q, transition, keyframes, animateChild} from '@angular/animations';
 const query = (s,a,o={optional:true})=>q(s,a,o);
 
 export const routerTransition = trigger('routerTransition', [
-  transition('* => *', [
-    query(':enter, :leave', style({ position: 'fixed', width:'100%' })),
-    query(':enter', style({ transform: 'translateX(100%)' })),
-    sequence([
-      query(':leave', animateChild()), 
-      group([
-        query(':leave', [
-          style({ transform: 'translateX(0%)' }),
-          animate('500ms cubic-bezier(.75,-0.48,.26,1.52)', 
-            style({ transform: 'translateX(-100%)' })),
-        ]),
-        query(':enter', [
-          style({ transform: 'translateX(100%)' }),
-          animate('500ms cubic-bezier(.75,-0.48,.26,1.52)', 
-            style({ transform: 'translateX(0%)' })),
-        ]),
-      ]),
-      query(':enter', animateChild()),
-    ])
+  transition(':enter', [
+    style({
+      opacity: 0,
+      transform: 'translateX(-100%)'
+    }),
+    animate('0.2s ease-in')
+  ]),
+  transition(':leave', [
+    animate('0.5s ease-out', style({
+      opacity: 0,
+      transform: 'translateY(100%)'
+    }))
   ])
 ]);

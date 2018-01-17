@@ -3,20 +3,19 @@ import {trigger, stagger, animate, style, group, query as q, transition, keyfram
 const query = (s,a,o={optional:true})=>q(s,a,o);
 
 export const homeTransition = trigger('homeTransition', [
-  transition('* <=> *', [
+  transition(':enter', [
     group([
       query('.white-paper *', style({ transform: 'translateY(200px)', opacity: 0 })),
       query('#ngxCarousel', stagger(300, [
-        style({ transform: 'translateY(-200px)', opacity: 0}),
+        style({ transform: 'translateX(-200px)', opacity: 0}),
         animateChild(),
-        animate('4s cubic-bezier(.75,-0.48,.26,1.52)', style('*')),
+        animate('2s cubic-bezier(.75,-0.48,.26,1.52)', style('*')),
       ])),
       query('.white-paper', stagger(300, [
-        style({ transform: 'translateY(200px)', opacity: 0}),
         animate('2s cubic-bezier(.75,-0.48,.26,1.52)', style('*')),
         query('.white-paper *', [
-          stagger(50, [
-            animate('1200ms cubic-bezier(0.35, 0, 0.25, 1)', style('*'))
+          stagger(10, [
+            animate('1s cubic-bezier(0.35, 0, 0.25, 1)', style('*'))
           ])
         ])
       ]))

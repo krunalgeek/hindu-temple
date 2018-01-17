@@ -25,6 +25,7 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { HallRentalComponent } from './services/hall-rental/hall-rental.component';
 import { DocorationsComponent } from './services/docorations/docorations.component';
 import { AppRouting } from './app.router';
+import { HeroPriestComponent } from './services/priest/hero-priest/hero-priest.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { AppRouting } from './app.router';
     NotFoundComponent,
     HallRentalComponent,
     DocorationsComponent,
+    HeroPriestComponent,
   ],
   imports: [
     BrowserModule,
