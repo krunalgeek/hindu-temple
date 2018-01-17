@@ -16,7 +16,7 @@
  
  <div id="mob-nav-list">
     <mat-list role="list">
-        <mat-list-item class="hind-mob-list" role="listitem">Home</mat-list-item>
+        <mat-list-item class="hind-mob-list" role="listitem" routerLink="/home">Home</mat-list-item>
     </mat-list>
     <mat-accordion>
         <mat-expansion-panel>
@@ -26,10 +26,10 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <mat-list role="list">
-            <mat-list-item role="listitem">Priest</mat-list-item>
-            <mat-list-item role="listitem">Food Catering</mat-list-item>
-            <mat-list-item role="listitem">Hall Booking</mat-list-item>
-            <mat-list-item role="listitem">Hall Decoration</mat-list-item>
+            <mat-list-item routerLink="/priest" role="listitem">Priest</mat-list-item>
+            <mat-list-item routerLink="/priest" role="listitem">Food Catering</mat-list-item>
+            <mat-list-item routerLink="/priest" role="listitem">Hall Booking</mat-list-item>
+            <mat-list-item routerLink="/priest" role="listitem">Hall Decoration</mat-list-item>
           </mat-list>
         </mat-expansion-panel>
         <mat-expansion-panel (opened)="panelOpenState = true"
