@@ -1,0 +1,7 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+#hero-priest {
+    padding-top: 112px;
+    height: 700px;
+    @include gradient($priest-direction, $priest-gradientColor);
+}

@@ -1,15 +1,28 @@
 <app-burger-menu (sideNavToggle) = "sidenav.toggle($event)"></app-burger-menu>
-<mat-sidenav-container >
+<mat-sidenav-container [className]="o.activatedRouteData.state">
     <mat-sidenav #sidenav mode="over">
       <app-sidenav></app-sidenav>
     </mat-sidenav>
     <mat-sidenav-content>
       <app-header></app-header>
-      <main role="main">
-        <app-home></app-home>
+      <main role="main"  [@routerTransition]="getState(o)" style="min-height:20vh;">
+        <router-outlet #o="outlet">
+        </router-outlet>
       </main>
       <footer>
         <app-footer></app-footer>
       </footer>
     </mat-sidenav-content>
 </mat-sidenav-container>
+<div *ngIf="spinnerRunning" class="globalSpinner">
+    <div class="la-ball-square-clockwise-spin la-3x">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+  </div>
+</div>
