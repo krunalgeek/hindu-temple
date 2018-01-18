@@ -34,7 +34,7 @@
                 line-height: 1;
             }
             button {
-                @include gradient($direction, $gradientColor);
+                @include gradient($home-direction, $home-gradientColor);
                 color: $white;
             }
         }

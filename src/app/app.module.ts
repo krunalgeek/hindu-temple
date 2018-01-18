@@ -26,6 +26,8 @@ import { HallRentalComponent } from './services/hall-rental/hall-rental.componen
 import { DocorationsComponent } from './services/docorations/docorations.component';
 import { AppRouting } from './app.router';
 import { HeroPriestComponent } from './services/priest/hero-priest/hero-priest.component';
+import { PriestServiceListComponent } from './services/priest/priest-service-list/priest-service-list.component';
+import { FormRquestComponent } from './services/priest/form-rquest/form-rquest.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { HeroPriestComponent } from './services/priest/hero-priest/hero-priest.c
     HallRentalComponent,
     DocorationsComponent,
     HeroPriestComponent,
+    PriestServiceListComponent,
+    FormRquestComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,6 +65,11 @@ import { HeroPriestComponent } from './services/priest/hero-priest/hero-priest.c
   ],
   providers: [
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ],
+  entryComponents: [
+    PriestServiceListComponent
+  ]
 })
 export class AppModule { }

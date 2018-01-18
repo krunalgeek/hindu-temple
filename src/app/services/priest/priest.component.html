@@ -1,2 +1,20 @@
 <app-hero-priest></app-hero-priest>
-<h1>I am priest</h1>
+<div class="container">
+    <div id="whitePaperPriest" class="white-paper" ngStyle.xs="margin-top:-60px;"  ngStyle.sm="margin-top:-90px;">
+        <div class="pagetitelcontainer">
+            <div class="titleContent" ngClass.xs="xs-titleContent">
+                <h3 class="page-title" ngClass.xs="xs-page-title">Priest Services</h3>
+            </div>
+        </div>
+        <div class="whitepaperCountainer">
+            <p class="mat-body-1 text-center pageMessage">
+                Our priest could perform any of the following rituals at Temple or at your place. Please contact office Telephone # 478-476-9440 for assistance.
+            </p>
+            <app-priest-service-list fxShow fxShow.xs="false"></app-priest-service-list>
+            <div class="content-center" fxHide fxHide.xs="false">
+                <button class="checkPreistSrc" (click)="checkList()" mat-raised-button >Check Available Service</button>
+            </div>
+            <app-form-rquest></app-form-rquest>
+        </div>
+    </div>
+</div>

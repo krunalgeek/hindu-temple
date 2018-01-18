@@ -1,5 +1,6 @@
 @import '~@angular/material/theming';
 $font-family: 'Roboto, monospace';
+$title-font: 'Tangerine', serif;
 $headline: mat-typography-level(32px, 48px, 700);
 $body-1: mat-typography-level(16px, 24px, 500);
 $nav-primary: mat-typography-level(18px, 24px, 700);
@@ -11,8 +12,8 @@ $blue: #3f51b5;
 $home-red: #FF0467;
 $home-orange: #FC7437;
 $homePageGradient : $home-red 0%, $home-orange 100%;
-$direction: -134deg;
-$gradientColor : $home-red 0%, $home-orange 100%;
+$home-direction: -134deg;
+$home-gradientColor : $home-red 0%, $home-orange 100%;
 $primary-heading-color:#FF0467;
 
 
