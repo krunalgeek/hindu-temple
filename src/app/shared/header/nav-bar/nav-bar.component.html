@@ -2,19 +2,19 @@
     <button mat-button  routerLink="/home" routerLinkActive="active">Home </button>
     <button mat-button [matMenuTriggerFor]="service" routerLinkActive="active">Service</button>
         <mat-menu #service="matMenu">
-            <button mat-menu-item  routerLink="/priest">Priest</button>
+            <button mat-menu-item routerLink="/priest">Priest</button>
             <button mat-menu-item routerLink="/priest">Food Catering</button>
-            <button mat-menu-item>Hall Booking</button>
-            <button mat-menu-item>Hall Decoration</button>
+            <button mat-menu-item routerLink="/priest">Hall Booking</button>
+            <button mat-menu-item routerLink="/priest">Hall Decoration</button>
         </mat-menu>
     <button  mat-button [matMenuTriggerFor]="gallery">Gallery</button>
         <mat-menu #gallery="matMenu">
-            <button mat-menu-item>Picture</button>
-            <button mat-menu-item>Video</button>
-            <button mat-menu-item>Music</button>
-            <button mat-menu-item>Books</button>
+            <button mat-menu-item routerLink="/priest">Picture</button>
+            <button mat-menu-item routerLink="/priest">Video</button>
+            <button mat-menu-item routerLink="/priest">Music</button>
+            <button mat-menu-item routerLink="/priest">Books</button>
         </mat-menu>
-    <button  mat-button>About Us</button>
-    <button  mat-button>Contact Us</button>
-    <button  mat-button>Membership</button>
+    <button  mat-button routerLink="/priest">About Us</button>
+    <button  mat-button routerLink="/priest">Contact Us</button>
+    <button  mat-button routerLink="/priest">Membership</button>
  </mat-nav-list>
