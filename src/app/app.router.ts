@@ -7,6 +7,7 @@ import { DocorationsComponent } from './services/docorations/docorations.compone
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { AboutUsComponent } from './about-us/about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { SignupComponent } from './membership/signup/signup.component';
 import { routerTransition } from './app.router.animations';
 
 const appRoutes = [
@@ -18,6 +19,7 @@ const appRoutes = [
     { path: 'decorations', component: PriestComponent, data: { state: 'decorations' } },
     { path: 'about-us', component: AboutUsComponent, data: { state: 'about-us' } },
     { path: 'contact-us', component: ContactUsComponent, data: { state: 'contact-us' } },
+    { path: 'sign-up', component: SignupComponent, data: { state: 'sign-up' } },
     { path: '**', component: NotFoundComponent  }
 ];
 

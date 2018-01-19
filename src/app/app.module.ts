@@ -33,6 +33,8 @@ import { AboutUsComponent } from './about-us/about-us/about-us.component';
 import { HeroAboutUsComponent } from './about-us/about-us/hero-about-us/hero-about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FormRequestComponent } from './contact-us/form-request/form-request.component';
+import { SignupComponent } from './membership/signup/signup.component';
+import { SignUpFormRequestComponent } from './membership/signup/sign-up-form-request/sign-up-form-request.component';
 
 
 @NgModule({
@@ -62,7 +64,9 @@ import { FormRequestComponent } from './contact-us/form-request/form-request.com
     AboutUsComponent,
     HeroAboutUsComponent,
     ContactUsComponent,
-    FormRequestComponent
+    FormRequestComponent,
+    SignupComponent,
+    SignUpFormRequestComponent
   ],
   imports: [
     BrowserModule,
