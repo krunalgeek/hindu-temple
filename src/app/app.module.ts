@@ -31,6 +31,7 @@ import { FormRquestComponent } from './services/priest/form-rquest/form-rquest.c
 import { SidenavService } from './shared/header/sidenav/sidenav.service';
 import { AboutUsComponent } from './about-us/about-us/about-us.component';
 import { HeroAboutUsComponent } from './about-us/about-us/hero-about-us/hero-about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { HeroAboutUsComponent } from './about-us/about-us/hero-about-us/hero-abo
     PriestServiceListComponent,
     FormRquestComponent,
     AboutUsComponent,
-    HeroAboutUsComponent
+    HeroAboutUsComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,

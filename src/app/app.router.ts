@@ -5,7 +5,8 @@ import { FoodCateringComponent } from './services/food-catering/food-catering.co
 import { HallRentalComponent } from './services/hall-rental/hall-rental.component';
 import { DocorationsComponent } from './services/docorations/docorations.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
-import { AboutUsComponent } from './about-us/about-us/about-us.component'; 
+import { AboutUsComponent } from './about-us/about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 import { routerTransition } from './app.router.animations';
 
 const appRoutes = [
@@ -16,10 +17,11 @@ const appRoutes = [
     { path: 'hall-rental', component: HallRentalComponent, data: { state: 'hall-rental' } },
     { path: 'decorations', component: PriestComponent, data: { state: 'decorations' } },
     { path: 'about-us', component: AboutUsComponent, data: { state: 'about-us' } },
+    { path: 'contact-us', component: ContactUsComponent, data: { state: 'contact-us' } },
     { path: '**', component: NotFoundComponent  }
 ];
-  
-export const AppRouting = RouterModule.forRoot(appRoutes, { 
+
+export const AppRouting = RouterModule.forRoot(appRoutes, {
     useHash: true,
     enableTracing: false
 });
