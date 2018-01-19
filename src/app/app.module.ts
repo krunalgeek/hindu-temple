@@ -29,6 +29,9 @@ import { HeroPriestComponent } from './services/priest/hero-priest/hero-priest.c
 import { PriestServiceListComponent } from './services/priest/priest-service-list/priest-service-list.component';
 import { FormRquestComponent } from './services/priest/form-rquest/form-rquest.component';
 import { SidenavService } from './shared/header/sidenav/sidenav.service';
+import { AboutUsComponent } from './about-us/about-us/about-us.component';
+import { HeroAboutUsComponent } from './about-us/about-us/hero-about-us/hero-about-us.component';
+
 
 @NgModule({
   declarations: [
@@ -54,6 +57,8 @@ import { SidenavService } from './shared/header/sidenav/sidenav.service';
     HeroPriestComponent,
     PriestServiceListComponent,
     FormRquestComponent,
+    AboutUsComponent,
+    HeroAboutUsComponent
   ],
   imports: [
     BrowserModule,
