@@ -32,6 +32,7 @@ import { SidenavService } from './shared/header/sidenav/sidenav.service';
 import { AboutUsComponent } from './about-us/about-us/about-us.component';
 import { HeroAboutUsComponent } from './about-us/about-us/hero-about-us/hero-about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FormRequestComponent } from './contact-us/form-request/form-request.component';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     FormRquestComponent,
     AboutUsComponent,
     HeroAboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    FormRequestComponent
   ],
   imports: [
     BrowserModule,
