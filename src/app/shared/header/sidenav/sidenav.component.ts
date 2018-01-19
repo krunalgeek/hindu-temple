@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter} from '@angular/core';
+import { MatSidenav } from '@angular/material';
+
+import { NavigationStart, Router } from '@angular/router';
+import { SidenavService } from './sidenav.service';
+
 
 @Component({
   selector: 'app-sidenav',
@@ -6,10 +11,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-
-  constructor() { }
-
+  constructor(
+    private sidenavService: SidenavService,
+    private router: Router,
+  ) {
+    this.router.events
+      .subscribe(event => {
+        if (event instanceof NavigationStart) {
+          this.sidenavService.close().then(() => { });
+        }
+      });
+  }
   ngOnInit() {
   }
-
 }

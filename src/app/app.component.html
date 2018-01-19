@@ -4,7 +4,7 @@
       <app-sidenav></app-sidenav>
     </mat-sidenav>
     <mat-sidenav-content>
-      <app-header></app-header>
+      <app-header ></app-header>
       <main role="main"  [@routerTransition]="getState(o)" style="min-height:20vh;">
         <router-outlet #o="outlet">
         </router-outlet>
@@ -14,7 +14,7 @@
       </footer>
     </mat-sidenav-content>
 </mat-sidenav-container>
-<div *ngIf="spinnerRunning" class="globalSpinner">
+<!-- <div *ngIf="spinnerRunning" class="globalSpinner">
     <div class="la-ball-square-clockwise-spin la-3x">
       <div></div>
       <div></div>
@@ -25,4 +25,4 @@
       <div></div>
       <div></div>
   </div>
-</div>
+</div> -->
