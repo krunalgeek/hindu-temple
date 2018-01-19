@@ -28,6 +28,7 @@ import { AppRouting } from './app.router';
 import { HeroPriestComponent } from './services/priest/hero-priest/hero-priest.component';
 import { PriestServiceListComponent } from './services/priest/priest-service-list/priest-service-list.component';
 import { FormRquestComponent } from './services/priest/form-rquest/form-rquest.component';
+import { SidenavService } from './shared/header/sidenav/sidenav.service';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { FormRquestComponent } from './services/priest/form-rquest/form-rquest.c
     AppRouting
   ],
   providers: [
+    SidenavService,
   ],
   bootstrap: [
     AppComponent

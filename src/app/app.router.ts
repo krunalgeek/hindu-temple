@@ -18,6 +18,6 @@ const appRoutes = [
 ];
   
 export const AppRouting = RouterModule.forRoot(appRoutes, { 
-    useHash: false,
-    enableTracing: true
+    useHash: true,
+    enableTracing: false
 });
