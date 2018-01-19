@@ -8,8 +8,7 @@ import { NavigationStart, Router } from '@angular/router';
   styleUrls: ['./burger-menu.component.scss']
 })
 export class BurgerMenuComponent implements OnInit {
-  @Output() sideNavToggle = new EventEmitter();
-  sideNavOpened: Boolean = false;
+  sideNavOpened: Boolean;
   constructor(
     private sidenavService: SidenavService,
     private router: Router,
@@ -17,9 +16,8 @@ export class BurgerMenuComponent implements OnInit {
     this.router.events
       .subscribe(event => {
         if (event instanceof NavigationStart) {
-          this.sidenavService.close().then(() => {
-            this.sideNavOpened = false;
-          });
+          this.sideNavOpened = false;
+          this.sidenavService.close();
         }
       });
   }
@@ -27,10 +25,7 @@ export class BurgerMenuComponent implements OnInit {
   ngOnInit() {
   }
   public sidenavToggle() {
-    this.sidenavService
-      .toggle()
-      .then(() => {
-        this.sideNavOpened =  !this.sideNavOpened;
-      });
+    this.sideNavOpened =  !this.sideNavOpened;
+    this.sidenavService.toggle();
   }
 }
