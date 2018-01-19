@@ -131,6 +131,15 @@ mat-sidenav-container.contact-us {
         }
     
 }
+//Contact Us Page
+mat-sidenav-container.sign-up {
+    header mat-toolbar.mat-toolbar.navIsFixed,
+    footer #appFooter,
+    footer .mbALlLinks  mat-expansion-panel {
+            @include gradient($sign-up-direction, $sign-up-gradientColor);
+        }
+    
+}
 
 
 /* =============================================
