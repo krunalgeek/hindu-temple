@@ -111,6 +111,14 @@ mat-sidenav-container.priest {
         }
     
 }
+mat-sidenav-container.about-us {
+    header mat-toolbar.mat-toolbar.navIsFixed,
+    footer #appFooter,
+    footer .mbALlLinks  mat-expansion-panel {
+            @include gradient($about-us-direction, $about-us-gradientColor);
+        }
+    
+}
 
 
 
