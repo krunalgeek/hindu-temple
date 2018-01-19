@@ -96,6 +96,7 @@ body {
 /* =============================================
             Navbar and Footer styel
 ===============================================*/
+//Home Page
 mat-sidenav-container.home {
     header mat-toolbar.mat-toolbar.navIsFixed,
     footer #appFooter,
@@ -103,6 +104,7 @@ mat-sidenav-container.home {
             @include gradient($home-direction, $home-gradientColor);
         }
 }
+//Priest Page
 mat-sidenav-container.priest {
     header mat-toolbar.mat-toolbar.navIsFixed,
     footer #appFooter,
@@ -111,6 +113,7 @@ mat-sidenav-container.priest {
         }
     
 }
+//About US Page
 mat-sidenav-container.about-us {
     header mat-toolbar.mat-toolbar.navIsFixed,
     footer #appFooter,
@@ -119,7 +122,15 @@ mat-sidenav-container.about-us {
         }
     
 }
-
+//Contact Us Page
+mat-sidenav-container.contact-us {
+    header mat-toolbar.mat-toolbar.navIsFixed,
+    footer #appFooter,
+    footer .mbALlLinks  mat-expansion-panel {
+            @include gradient($contact-us-direction, $contact-us-gradientColor);
+        }
+    
+}
 
 
 /* =============================================
