@@ -1,0 +1,90 @@
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutAlign.xs="start start">
+  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" maxlength="30" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
+    <input matInput placeholder="First Name" required>
+    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+  </mat-form-field>
+
+
+  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
+    <input matInput maxlength="30" placeholder="Last Name" required>
+    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+  </mat-form-field>
+
+
+  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Please enter valid Email address.">
+    <input matInput placeholder="Enter your email" required>
+    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+  </mat-form-field>
+
+
+  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Please enter valid US phone number.">
+    <span matPrefix>+1 &nbsp;</span>
+    <input type="tel" matInput placeholder="Telephone" required>
+    <mat-icon matSuffix>mode_edit</mat-icon>
+    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+  </mat-form-field>
+
+  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100">
+    <input matInput [max]="maxDate" [matDatepicker]="picker" placeholder="Date of birth" required>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker touchUi="true" #picker></mat-datepicker>
+  </mat-form-field>
+
+
+  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" maxlength="30" fxFlex.xs="100" hintLabel="">
+    <input matInput placeholder="Address Line 1" required>
+    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+  </mat-form-field>
+  
+  
+  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="">
+    <input matInput maxlength="30" placeholder="Address Line 2" required>
+    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+  </mat-form-field>
+
+  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="">
+    <input matInput maxlength="30" placeholder="City" required>
+    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+  </mat-form-field>
+
+  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" >
+    <mat-select placeholder="State">
+      <mat-option>
+        NJ
+      </mat-option>
+      <mat-option>
+        NC
+      </mat-option>
+      <mat-option>
+        NY
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="">
+    <input matInput maxlength="30" placeholder="Zip Code" required>
+    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+  </mat-form-field>
+
+  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="">
+    <input matInput maxlength="30" placeholder="Occupation" required>
+    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+  </mat-form-field>
+
+  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="">
+    <input matInput maxlength="30" placeholder="Original Root" required>
+    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+  </mat-form-field>
+
+  <div fxFlex="100">Do you want to participate in volunteer work?</div>
+  <mat-radio-group fxFlex="100"> 
+    <mat-radio-button value="1">Yes</mat-radio-button>
+    <mat-radio-button value="2">No</mat-radio-button>
+  </mat-radio-group>  
+
+  <div fxFlex="100">Gender</div>
+  <mat-radio-group fxFlex="100"> 
+    <mat-radio-button value="1">Male</mat-radio-button>
+    <mat-radio-button value="2">Female</mat-radio-button>
+  </mat-radio-group>
+</div>

@@ -90,6 +90,7 @@ body {
 }
 .content-centered {
     display: flex;
+    align-content: center;
     justify-content: center;
 }
 
@@ -146,28 +147,40 @@ mat-sidenav-container.sign-up {
            Common styel
 ===============================================*/
 // title for every page
-.pagetitelcontainer {
-    display: flex;
-    justify-content: center;
-    .titleContent {
-        width: auto;
-        padding: 10px 20px;
-        position: relative;
-        top:-35px;
-        border-radius: 10px;
-        &.xs-titleContent {
-            top: -30px;
-        }
-        @include mat-elevation(12);
-        .page-title {
-            color: $white;
-            line-height: 1;
-            margin: 0;
-            font-size: 48px;
-            font-family: $title-font;
-            text-shadow: 4px 4px 4px #aaa;
-            &.xs-page-title {
-                font-size: 32px;
+
+
+.white-paper {
+    width: 100%;
+    position: relative;
+    background: $white;
+    @include mat-elevation(12);
+    margin-top: -120px;
+    z-index: 4;
+    padding-bottom:20px; 
+    border-radius: 20px;
+    .pagetitelcontainer {
+        display: flex;
+        justify-content: center;
+        .titleContent {
+            width: auto;
+            padding: 10px 20px;
+            position: relative;
+            top:-35px;
+            border-radius: 10px;
+            &.xs-titleContent {
+                top: -30px;
+            }
+            @include mat-elevation(12);
+            .page-title {
+                color: $white;
+                line-height: 1;
+                margin: 0;
+                font-size: 48px;
+                font-family: $title-font;
+                text-shadow: 4px 4px 4px #aaa;
+                &.xs-page-title {
+                    font-size: 32px;
+                }
             }
         }
     }

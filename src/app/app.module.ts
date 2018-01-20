@@ -30,11 +30,13 @@ import { PriestServiceListComponent } from './services/priest/priest-service-lis
 import { FormRquestComponent } from './services/priest/form-rquest/form-rquest.component';
 import { SidenavService } from './shared/header/sidenav/sidenav.service';
 import { AboutUsComponent } from './about-us/about-us/about-us.component';
-import { HeroAboutUsComponent } from './about-us/about-us/hero-about-us/hero-about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FormRequestComponent } from './contact-us/form-request/form-request.component';
 import { SignupComponent } from './membership/signup/signup.component';
-import { SignUpFormRequestComponent } from './membership/signup/sign-up-form-request/sign-up-form-request.component';
+import { YourdetailFormsComponent } from './membership/signup/yourdetail-forms/yourdetail-forms.component';
+import { YourfamilyFormsComponent } from './membership/signup/yourfamily-forms/yourfamily-forms.component';
+import { MembershipPaymentFormsComponent } from './membership/signup/membership-payment-forms/membership-payment-forms.component';
+
 
 
 @NgModule({
@@ -62,11 +64,12 @@ import { SignUpFormRequestComponent } from './membership/signup/sign-up-form-req
     PriestServiceListComponent,
     FormRquestComponent,
     AboutUsComponent,
-    HeroAboutUsComponent,
     ContactUsComponent,
     FormRequestComponent,
     SignupComponent,
-    SignUpFormRequestComponent
+    YourdetailFormsComponent,
+    YourfamilyFormsComponent,
+    MembershipPaymentFormsComponent,
   ],
   imports: [
     BrowserModule,

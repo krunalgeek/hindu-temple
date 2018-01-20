@@ -1,7 +1,0 @@
-@import '~sass/variables';
-@import '~sass/mixins';
-#hero-about-us {
-    padding-top: 112px;
-    height: 400px;
-    @include gradient($about-us-direction, $about-us-gradientColor);
-}
