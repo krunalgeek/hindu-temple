@@ -8,6 +8,7 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { AboutUsComponent } from './about-us/about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SignupComponent } from './membership/signup/signup.component';
+import { SigninComponent } from './membership/signin/signin.component';
 import { routerTransition } from './app.router.animations';
 
 const appRoutes = [
@@ -20,6 +21,7 @@ const appRoutes = [
     { path: 'about-us', component: AboutUsComponent, data: { state: 'about-us' } },
     { path: 'contact-us', component: ContactUsComponent, data: { state: 'contact-us' } },
     { path: 'sign-up', component: SignupComponent, data: { state: 'sign-up' } },
+    { path: 'sign-in', component: SigninComponent, data: { state: 'sign-in' } },
     { path: '**', component: NotFoundComponent  }
 ];
 

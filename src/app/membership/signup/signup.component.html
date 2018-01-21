@@ -1,4 +1,4 @@
-<section id="membership-sign-up" ngStyle.xs="padding-top:74px; height: 250px;" ngStyle.sm="height: 300px;">
+<section id="hero-sign-up" ngStyle.xs="padding-top:74px; height: 250px;" ngStyle.sm="height: 300px;">
 </section>
 <div class="container">
   <div id="whitePaperSignUp" class="white-paper" ngStyle.xs="margin-top:-60px;" ngStyle.sm="margin-top:-90px;">
@@ -14,7 +14,7 @@
               <ng-template matStepLabel>Your Details</ng-template>
               <app-yourdetail-forms></app-yourdetail-forms>
               <div id="yourDetailNextBtn" class="text-right">
-                <button mat-fab color="primary">
+                <button mat-fab class="signUpButtonBg">
                     <mat-icon>keyboard_arrow_right</mat-icon>
                 </button>
               </div>
@@ -23,10 +23,10 @@
               <ng-template matStepLabel>Family Details</ng-template>
               <app-yourfamily-forms></app-yourfamily-forms>
               <div fxLayout="row" fxLayoutAlign="space-between">
-                <button mat-fab color="primary">
+                <button mat-fab class="signUpButtonBg">
                   <mat-icon>keyboard_arrow_left</mat-icon>
               </button>
-                <button mat-fab color="primary">
+                <button mat-fab class="signUpButtonBg">
                   <mat-icon>keyboard_arrow_right</mat-icon>
               </button>
               </div>
@@ -35,7 +35,7 @@
             <ng-template matStepLabel>Payment</ng-template>
             <app-membership-payment-forms></app-membership-payment-forms>
             <div fxLayout="row" fxLayoutAlign="end center">
-                <button mat-fab color="primary">
+                <button mat-fab class="signUpButtonBg">
                     <mat-icon>send</mat-icon>
                 </button>
             </div>

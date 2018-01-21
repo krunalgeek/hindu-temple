@@ -16,8 +16,9 @@
             }
         }
         .submitBtnContainer {
-            #contactUsSubmit {
-                @include gradient($contact-us-direction, $contact-us-gradientColor);
+            #xsSingInSubmit,
+            #lgSingInSubmit {
+                @include gradient($sign-in-direction, $sign-in-gradientColor);
                 color:$white;
             }
         }

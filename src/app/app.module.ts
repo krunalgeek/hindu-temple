@@ -30,7 +30,6 @@ import { PriestServiceListComponent } from './services/priest/priest-service-lis
 import { SidenavService } from './shared/header/sidenav/sidenav.service';
 import { AboutUsComponent } from './about-us/about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { FormRequestComponent } from './contact-us/form-request/form-request.component';
 import { SignupComponent } from './membership/signup/signup.component';
 import { YourdetailFormsComponent } from './membership/signup/yourdetail-forms/yourdetail-forms.component';
 import { YourfamilyFormsComponent } from './membership/signup/yourfamily-forms/yourfamily-forms.component';
@@ -38,6 +37,8 @@ import { MembershipPaymentFormsComponent } from './membership/signup/membership-
 import { PriestFormComponent } from './services/priest/priest-form/priest-form.component';
 import { HallRentalFormComponent } from './services/hall-rental/hall-rental-form/hall-rental-form.component';
 import { ContactFormComponent } from './contact-us/contact-form/contact-form.component';
+import { SigninComponent } from './membership/signin/signin.component';
+import { SigninFormComponent } from './membership/signin/signin-form/signin-form.component';
 
 
 
@@ -65,7 +66,6 @@ import { ContactFormComponent } from './contact-us/contact-form/contact-form.com
     PriestServiceListComponent,
     AboutUsComponent,
     ContactUsComponent,
-    FormRequestComponent,
     SignupComponent,
     YourdetailFormsComponent,
     YourfamilyFormsComponent,
@@ -73,6 +73,8 @@ import { ContactFormComponent } from './contact-us/contact-form/contact-form.com
     PriestFormComponent,
     HallRentalFormComponent,
     ContactFormComponent,
+    SigninComponent,
+    SigninFormComponent,
   ],
   imports: [
     BrowserModule,

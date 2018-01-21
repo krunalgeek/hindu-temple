@@ -1,6 +1,6 @@
 @import '~sass/variables';
 @import '~sass/mixins';
-#membership-sign-up {
+#hero-sign-up{
     padding-top: 112px;
     height: 400px;
     @include gradient($sign-up-direction, $sign-up-gradientColor);
@@ -18,6 +18,10 @@
                 #yourDetailNextBtn {
                     padding: 20px 10px;
                 }
+            }
+            .signUpButtonBg {
+                @include gradient($sign-up-direction, $sign-up-gradientColor);
+                margin: 10px;
             }
         }
     }

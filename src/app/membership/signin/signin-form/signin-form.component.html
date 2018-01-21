@@ -1,0 +1,36 @@
+<div class="form-container" div fxLayout="row" fxLayoutAlign="center start">
+    <form fxFlex="40" 
+        (ngSubmit)="onSubmit(f)" #f="ngForm" fxFlex.xs="100">
+        <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutAlign.xs="start start" >
+            
+            <div fxFlex="100" class="formTitle">
+                <h3 class="mat-subheading-2">Login Form</h3>
+            </div>
+
+            <mat-form-field  fxFlex="100" maxlength="30"  hintLabel="please enter Username or email address">
+              <input matInput placeholder="User Name"  name="username" ngModel #username="ngModel"  required>
+              <mat-error *ngIf="username.invalid">Please enter valid first name</mat-error>
+            </mat-form-field>
+
+
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="100" hintLabel="Number and Sign not allowed">
+              <input matInput placeholder="Enter your password" name="password" maxlength="15" ngModel  #password="ngModel" [type]="hide ? 'password' : 'text'">
+              <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+              <mat-error *ngIf="password.invalid">Password is incorrect please enter valid password</mat-error>
+            </mat-form-field>
+
+
+            <div fxFlex="100" fxFlexAlign="end" class="submitBtnContainer text-right">
+                <button mat-mini-fab id="xsSingInSubmit" fxHide fxHide.xs="false" [disabled]="!f.valid">
+                    <mat-icon aria-label="submit preist request">send</mat-icon>
+                </button>
+                <button mat-fab id="lgSingInSubmit" fxShow fxShow.xs="false" [disabled]="!f.valid">
+                    <mat-icon aria-label="submit preist request">send</mat-icon>
+                </button>
+            </div>
+            <div fxFlex="100" fxFlexAlign="end" class="submitBtnContainer text-left">
+                <a href="#" routerLink="/sign-up">You don't have an account?</a>
+            </div>
+        </div>
+    </form>
+</div>

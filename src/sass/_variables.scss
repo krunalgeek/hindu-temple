@@ -52,3 +52,12 @@ $sign-up-accent: #00c9ff;
 $sign-up-gradient : $sign-up-primary 0%, $sign-up-accent 100%;
 $sign-up-direction: to right;
 $sign-up-gradientColor : $sign-up-gradient;
+
+
+////////////////// Sign In Page////////////////////////
+$sign-in-primary: #3D4E81;
+$sign-in-accent: #5753C9;
+$sign-in-subprimary: #6E7FF3;
+$sign-in-gradient : $sign-in-primary 0%, $sign-in-accent 48%, $sign-in-subprimary 100%;
+$sign-in-direction: -225deg;
+$sign-in-gradientColor : $sign-in-gradient;

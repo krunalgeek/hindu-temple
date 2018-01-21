@@ -1,0 +1,28 @@
+@import '~sass/_mixins';
+@import '~sass/_variables';
+/* COLOR VARIABLES
+============================================= */
+#hero-sign-in {
+    padding-top: 112px;
+    height: 400px;
+    @include gradient($sign-in-direction, $sign-in-gradientColor);
+}
+#whitePaperSignIn.white-paper {
+    .pagetitelcontainer {
+        .titleContent {
+            @include gradient($sign-in-direction, $sign-in-gradientColor);
+        }
+    }
+    .whitepaperCountainer {
+        p.pageMessage {
+            margin:0 auto;
+            max-width: 700px;
+        }
+        padding: 0 15px 15px 15px;
+        .checkPreistSrc {
+            @include gradient($sign-in-direction, $sign-in-gradientColor);
+            color:$white;
+            margin: 0 auto;
+        }
+    }
+}

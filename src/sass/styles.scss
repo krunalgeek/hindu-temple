@@ -153,6 +153,15 @@ mat-sidenav-container.sign-up {
     
 }
 
+//Sign In Page
+mat-sidenav-container.sign-in {
+    header mat-toolbar.mat-toolbar.navIsFixed,
+    footer #appFooter,
+    footer .mbALlLinks  mat-expansion-panel {
+        @include gradient($sign-in-direction, $sign-in-gradientColor);
+    }
+    
+}
 
 /* =============================================
            Common styel
