@@ -8,13 +8,13 @@
             </div>
 
             <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" maxlength="30" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
-              <input matInput placeholder="First Name" pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$" name="firstName" #firstName="ngModel" ngModel required>
-              <mat-error *ngIf="email.invalid">Please enter valid first name</mat-error>
+              <input matInput placeholder="First Name" pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$" name="firstName" ngModel #firstName="ngModel"  required>
+              <mat-error *ngIf="firstName.invalid">Please enter valid first name</mat-error>
             </mat-form-field>
 
 
             <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
-              <input matInput maxlength="30" pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$" name="lastName" #lastName="ngModel" ngModel placeholder="Last Name" required>
+              <input matInput name="lastName" maxlength="30"  #lastName="ngModel"  pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$" ngModel placeholder="Last Name" required>
               <mat-error *ngIf="lastName.invalid">Please enter valid last name</mat-error>
             </mat-form-field>
 
@@ -27,30 +27,20 @@
 
             <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Please enter valid US phone number.">
               <span matPrefix>+1 &nbsp;</span>
-              <input type="tel" matInput maxlength="10" name="phone" pattern="^\d{10}$" ngModel #phone="ngModel" placeholder="Telephone" required>
+              <input type="tel" matInput maxlength="10" name="phone" pattern="^\d{10}$" #phone="ngModel" ngModel placeholder="Telephone" required>
               <mat-icon matSuffix>phone</mat-icon>
-              <mat-error *ngIf="phone.invalid">Please enter valid US phone number</mat-error>
-            </mat-form-field>
-
-
-            <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" required>
-              <mat-select placeholder="Select service" name="priestService" ngModel>
-                  <mat-option *ngFor="let service of priestServices" [value]="service.text">
-                      {{service.text}}
-                  </mat-option>
-              </mat-select>
+              <mat-error *ngIf="phone.invalid">Please enter valid US number</mat-error>
             </mat-form-field>
 
             <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100">
-              <input matInput [min]="minDate" name="serviceDate" ngModel [matDatepicker]="picker" placeholder="Choose a date" required>
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker touchUi="true" #picker></mat-datepicker>
+              <textarea matInput  name="comment" #comment="ngModel" ngModel rows="4" placeholder="Leave a comment"></textarea>
             </mat-form-field>
+
             <div fxFlex="100" fxFlexAlign="end" class="submitBtnContainer text-right">
-                <button mat-mini-fab id="xsPreistSubmit" fxHide fxHide.xs="false" [disabled]="!f.valid">
+                <button mat-mini-fab id="xsContactUsSubmit" fxHide fxHide.xs="false" [disabled]="!f.valid">
                     <mat-icon aria-label="submit preist request">send</mat-icon>
                 </button>
-                <button mat-fab id="lgPreistSubmit" fxShow fxShow.xs="false" [disabled]="!f.valid">
+                <button mat-fab id="lgContactUsSubmit" fxShow fxShow.xs="false" [disabled]="!f.valid">
                     <mat-icon aria-label="submit preist request">send</mat-icon>
                 </button>
             </div>

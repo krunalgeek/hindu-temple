@@ -102,25 +102,36 @@ mat-sidenav-container.home {
     header mat-toolbar.mat-toolbar.navIsFixed,
     footer #appFooter,
     footer .mbALlLinks  mat-expansion-panel{
-            @include gradient($home-direction, $home-gradientColor);
-        }
+        @include gradient($home-direction, $home-gradientColor);
+    }
 }
 //Priest Page
 mat-sidenav-container.priest {
     header mat-toolbar.mat-toolbar.navIsFixed,
     footer #appFooter,
     footer .mbALlLinks  mat-expansion-panel {
-            @include gradient($priest-direction, $priest-gradientColor);
-        }
+        @include gradient($priest-direction, $priest-gradientColor);
+    }
     
 }
+
+//Hall Rental Page
+mat-sidenav-container.hall-rental {
+    header mat-toolbar.mat-toolbar.navIsFixed,
+    footer #appFooter,
+    footer .mbALlLinks  mat-expansion-panel {
+        @include gradient($hall-rental-direction, $hall-rental-gradientColor);
+    }
+    
+}
+
 //About US Page
 mat-sidenav-container.about-us {
     header mat-toolbar.mat-toolbar.navIsFixed,
     footer #appFooter,
     footer .mbALlLinks  mat-expansion-panel {
-            @include gradient($about-us-direction, $about-us-gradientColor);
-        }
+        @include gradient($about-us-direction, $about-us-gradientColor);
+    }
     
 }
 //Contact Us Page
@@ -128,17 +139,17 @@ mat-sidenav-container.contact-us {
     header mat-toolbar.mat-toolbar.navIsFixed,
     footer #appFooter,
     footer .mbALlLinks  mat-expansion-panel {
-            @include gradient($contact-us-direction, $contact-us-gradientColor);
-        }
+        @include gradient($contact-us-direction, $contact-us-gradientColor);
+    }
     
 }
-//Contact Us Page
+//Sign Up Page
 mat-sidenav-container.sign-up {
     header mat-toolbar.mat-toolbar.navIsFixed,
     footer #appFooter,
     footer .mbALlLinks  mat-expansion-panel {
-            @include gradient($sign-up-direction, $sign-up-gradientColor);
-        }
+        @include gradient($sign-up-direction, $sign-up-gradientColor);
+    }
     
 }
 
