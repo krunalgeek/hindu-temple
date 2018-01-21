@@ -1,0 +1,30 @@
+@import '~sass/_mixins';
+@import '~sass/_variables';
+/* COLOR VARIABLES
+============================================= */
+#hero-hall-rental {
+    padding-top: 112px;
+    height: 400px;
+    @include gradient($hall-rental-direction, $hall-rental-gradientColor);
+}
+#whitePaperHallRental.white-paper {
+    .pagetitelcontainer {
+        .titleContent {
+            @include gradient($hall-rental-direction, $hall-rental-gradientColor);
+        }
+    }
+    .whitepaperCountainer {
+        p.pageMessage {
+            margin:0 auto;
+            max-width: 700px;
+        }
+        mat-card {
+            width: 260px;
+            height: 180px;
+            padding: 0;
+            margin: 20px auto;
+            @include mat-elevation(12);
+        }
+        padding: 0 15px 15px 15px;
+    }
+}

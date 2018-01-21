@@ -16,9 +16,9 @@
             }
         }
         .submitBtnContainer {
-            #xsPreistSubmit,
-            #lgPreistSubmit {
-                @include gradient($priest-direction, $priest-gradientColor);
+            #xsContactUsSubmit,
+            #lgContactUsSubmit {
+                @include gradient($contact-us-direction, $contact-us-gradientColor);
                 color:$white;
             }
         }

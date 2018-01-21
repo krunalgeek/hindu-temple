@@ -36,6 +36,8 @@ import { YourdetailFormsComponent } from './membership/signup/yourdetail-forms/y
 import { YourfamilyFormsComponent } from './membership/signup/yourfamily-forms/yourfamily-forms.component';
 import { MembershipPaymentFormsComponent } from './membership/signup/membership-payment-forms/membership-payment-forms.component';
 import { PriestFormComponent } from './services/priest/priest-form/priest-form.component';
+import { HallRentalFormComponent } from './services/hall-rental/hall-rental-form/hall-rental-form.component';
+import { ContactFormComponent } from './contact-us/contact-form/contact-form.component';
 
 
 
@@ -69,6 +71,8 @@ import { PriestFormComponent } from './services/priest/priest-form/priest-form.c
     YourfamilyFormsComponent,
     MembershipPaymentFormsComponent,
     PriestFormComponent,
+    HallRentalFormComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
