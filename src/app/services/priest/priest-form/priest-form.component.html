@@ -1,0 +1,59 @@
+<div class="form-container" div fxLayout="row" fxLayoutAlign="center start">
+    <form fxFlex="75" 
+        (ngSubmit)="onSubmit(f)" #f="ngForm" fxFlex.xs="100">
+        <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutAlign.xs="start start" >
+            
+            <div fxFlex="100" class="formTitle">
+                <h3 class="mat-subheading-2">Request Form</h3>
+            </div>
+
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" maxlength="30" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
+              <input matInput placeholder="First Name" pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$" name="firstName" ngModel required>
+              <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+            </mat-form-field>
+
+
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
+              <input matInput maxlength="30" pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$" name="lastName" ngModel placeholder="Last Name" required>
+              <!-- <mat-error *ngIf="email.invalid">Please enter valid email</mat-error> -->
+            </mat-form-field>
+
+
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Please enter valid Email address.">
+              <input matInput  name="email" maxlength="30" #email="ngModel" email ngModel placeholder="Enter your email"  required>
+              <mat-error *ngIf="email.invalid">Please enter valid email</mat-error>
+            </mat-form-field>
+
+
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Please enter valid US phone number.">
+              <span matPrefix>+1 &nbsp;</span>
+              <input type="tel" matInput maxlength="10" name="phone" pattern="^\d{10}$" ngModel placeholder="Telephone" required>
+              <mat-icon matSuffix>phone</mat-icon>
+              <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+            </mat-form-field>
+
+
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" required>
+              <mat-select placeholder="Select service" name="priestService" ngModel>
+                  <mat-option *ngFor="let service of priestServices" [value]="service.text">
+                      {{service.text}}
+                  </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100">
+              <input matInput [min]="minDate" name="serviceDate" ngModel [matDatepicker]="picker" placeholder="Choose a date" required>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker touchUi="true" #picker></mat-datepicker>
+            </mat-form-field>
+            <div fxFlex="100" fxFlexAlign="end" class="submitBtnContainer text-right">
+                <button mat-mini-fab id="xsPreistSubmit" fxHide fxHide.xs="false" [disabled]="!f.valid">
+                    <mat-icon aria-label="submit preist request">send</mat-icon>
+                </button>
+                <button mat-fab id="lgPreistSubmit" fxShow fxShow.xs="false" [disabled]="!f.valid">
+                    <mat-icon aria-label="submit preist request">send</mat-icon>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

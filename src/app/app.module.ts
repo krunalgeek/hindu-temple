@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { AppComponent } from './app.component';
@@ -25,9 +26,7 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { HallRentalComponent } from './services/hall-rental/hall-rental.component';
 import { DocorationsComponent } from './services/docorations/docorations.component';
 import { AppRouting } from './app.router';
-import { HeroPriestComponent } from './services/priest/hero-priest/hero-priest.component';
 import { PriestServiceListComponent } from './services/priest/priest-service-list/priest-service-list.component';
-import { FormRquestComponent } from './services/priest/form-rquest/form-rquest.component';
 import { SidenavService } from './shared/header/sidenav/sidenav.service';
 import { AboutUsComponent } from './about-us/about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -36,6 +35,7 @@ import { SignupComponent } from './membership/signup/signup.component';
 import { YourdetailFormsComponent } from './membership/signup/yourdetail-forms/yourdetail-forms.component';
 import { YourfamilyFormsComponent } from './membership/signup/yourfamily-forms/yourfamily-forms.component';
 import { MembershipPaymentFormsComponent } from './membership/signup/membership-payment-forms/membership-payment-forms.component';
+import { PriestFormComponent } from './services/priest/priest-form/priest-form.component';
 
 
 
@@ -60,9 +60,7 @@ import { MembershipPaymentFormsComponent } from './membership/signup/membership-
     NotFoundComponent,
     HallRentalComponent,
     DocorationsComponent,
-    HeroPriestComponent,
     PriestServiceListComponent,
-    FormRquestComponent,
     AboutUsComponent,
     ContactUsComponent,
     FormRequestComponent,
@@ -70,9 +68,11 @@ import { MembershipPaymentFormsComponent } from './membership/signup/membership-
     YourdetailFormsComponent,
     YourfamilyFormsComponent,
     MembershipPaymentFormsComponent,
+    PriestFormComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
