@@ -7,10 +7,41 @@
         <h3 class="page-title" ngClass.xs="xs-page-title">Sign Up</h3>
       </div>
     </div>
-    <div class="whitepaperCountainer" fxLayout="column" fxLayoutAlign="space-around center">
-      <div id="contactUsForm" fxFlex="100">
-        <app-sign-up-form-request></app-sign-up-form-request>
-      </div>
+    <div class="whitepaperCountainer" fxLayout="row" fxLayoutAlign="space-around center">
+      <form novalidate id="signUpForm" fxFlex="100" fxFlex.gt-sm="75">
+        <mat-horizontal-stepper>
+          <mat-step id="yourDetailSection" [stepControl]="firstFormGroup">
+              <ng-template matStepLabel>Your Details</ng-template>
+              <app-yourdetail-forms></app-yourdetail-forms>
+              <div id="yourDetailNextBtn" class="text-right">
+                <button mat-fab color="primary">
+                    <mat-icon>keyboard_arrow_right</mat-icon>
+                </button>
+              </div>
+          </mat-step>
+          <mat-step id="familyDetailSection">
+              <ng-template matStepLabel>Family Details</ng-template>
+              <app-yourfamily-forms></app-yourfamily-forms>
+              <div fxLayout="row" fxLayoutAlign="space-between">
+                <button mat-fab color="primary">
+                  <mat-icon>keyboard_arrow_left</mat-icon>
+              </button>
+                <button mat-fab color="primary">
+                  <mat-icon>keyboard_arrow_right</mat-icon>
+              </button>
+              </div>
+          </mat-step>
+          <mat-step id="paymentDetailSection">
+            <ng-template matStepLabel>Payment</ng-template>
+            <app-membership-payment-forms></app-membership-payment-forms>
+            <div fxLayout="row" fxLayoutAlign="end center">
+                <button mat-fab color="primary">
+                    <mat-icon>send</mat-icon>
+                </button>
+            </div>
+          </mat-step>
+        </mat-horizontal-stepper>
+      </form>
     </div>
   </div>
 </div>

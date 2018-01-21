@@ -2,19 +2,14 @@
 @import '~sass/_variables';
 /* COLOR VARIABLES
 ============================================= */
-#whitePaperAboutUs.white-paper {
-    width: 100%;
-    position: relative;
-    background: $white;
-    @include mat-elevation(12);
-    margin-top: -120px;
-    z-index: 4;
-    padding-bottom:20px; 
-    border-radius: 20px;
-    .pagetitelcontainer {
-        .titleContent {
-            @include gradient($about-us-direction, $about-us-gradientColor);
-        }
+#hero-about-us {
+    padding-top: 112px;
+    height: 400px;
+    @include gradient($about-us-direction, $about-us-gradientColor);
+}
+#whitePaperAboutUs {
+    .titleContent {
+        @include gradient($about-us-direction, $about-us-gradientColor);
     }
     .whitepaperCountainer {
         padding: 20px;

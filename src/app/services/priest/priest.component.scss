@@ -2,15 +2,12 @@
 @import '~sass/_variables';
 /* COLOR VARIABLES
 ============================================= */
+#hero-priest {
+    padding-top: 112px;
+    height: 400px;
+    @include gradient($priest-direction, $priest-gradientColor);
+}
 #whitePaperPriest.white-paper {
-    width: 100%;
-    position: relative;
-    background: $white;
-    @include mat-elevation(12);
-    margin-top: -120px;
-    z-index: 4;
-    padding-bottom:20px; 
-    border-radius: 20px;
     .pagetitelcontainer {
         .titleContent {
             @include gradient($priest-direction, $priest-gradientColor);

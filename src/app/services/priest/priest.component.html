@@ -1,4 +1,4 @@
-<app-hero-priest></app-hero-priest>
+<section id="hero-priest"  ngStyle.xs="padding-top:74px; height: 250px;" ngStyle.sm="height: 300px;"></section>
 <div class="container">
     <div id="whitePaperPriest" class="white-paper" ngStyle.xs="margin-top:-60px;"  ngStyle.sm="margin-top:-90px;">
         <div class="pagetitelcontainer">
@@ -12,9 +12,9 @@
             </p>
             <app-priest-service-list fxShow fxShow.xs="false"></app-priest-service-list>
             <div class="content-center" fxHide fxHide.xs="false">
-                <button class="checkPreistSrc" (click)="checkList()" mat-raised-button >Check Available Service</button>
+                <button type='button' class="checkPreistSrc" (click)="checkList()" mat-raised-button >Check Available Service</button>
             </div>
-            <app-form-rquest></app-form-rquest>
+            <app-priest-form></app-priest-form>
         </div>
     </div>
 </div>
