@@ -1,33 +1,42 @@
-<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutAlign.xs="start start">
-    <mat-form-field ngStyle.xs="width:100%;" fxFlex="30" maxlength="30" fxFlex.xs="100" hintLabel="Please enter card number">
-      <input matInput placeholder="Card Number" required>
-      <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-    </mat-form-field>
-  
-  
-    <mat-form-field ngStyle.xs="width:100%;" fxFlex="30" fxFlex.xs="100" hintLabel="Please enter in formate MM/YYYY">
-      <input matInput maxlength="30" placeholder="Expire Date" required>
-      <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-    </mat-form-field>
-
-    <mat-form-field ngStyle.xs="width:100%;" fxFlex="30" fxFlex.xs="100" hintLabel="Please enter three digit number">
-      <input matInput maxlength="30" placeholder="CVC Number" required>
-      <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-    </mat-form-field>
-
-    <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" >
-      <mat-select placeholder="Membership Term">
-        <mat-option>
-          Yearly
-        </mat-option>
-        <mat-option>
-          Life Time
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-
-    <mat-form-field ngStyle.xs="width:100%;" fxFlex="45" fxFlex.xs="100" hintLabel="Please enter amount">
-        <input matInput maxlength="30" placeholder="Amount" required>
+<form id="membershipCardDetails" [formGroup]="cardDetail" (ngSubmit)="onSubmit()">
+  <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutAlign.xs="start start">
+      <mat-form-field ngStyle.xs="width:100%;" fxFlex="30" maxlength="30" fxFlex.xs="100" hintLabel="Please enter card number">
+        <input matInput formControlName="cardNumber" placeholder="Card Number" >
         <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
       </mat-form-field>
-</div>
+    
+    
+      <mat-form-field ngStyle.xs="width:100%;" fxFlex="30" fxFlex.xs="100" hintLabel="Please enter in formate MM/YYYY">
+        <input matInput formControlName="expireMonthAndYear" maxlength="30" placeholder="Expire Date" >
+        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+      </mat-form-field>
+
+      <mat-form-field ngStyle.xs="width:100%;" fxFlex="30" fxFlex.xs="100" hintLabel="Please enter three digit number from backside of card">
+        <input matInput formControlName="securityCode"  maxlength="30" placeholder="CVC Number" >
+        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+      </mat-form-field>
+
+      <mat-form-field ngStyle.xs="width:100%;" fxFlex="45" fxFlex.xs="100" >
+        <mat-select formControlName="memberShipTerm"  placeholder="Membership Term">
+          <mat-option [value]="'Yearly'">
+            Yearly
+          </mat-option>
+          <mat-option [value]="'Life time'">
+            Life Time
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field ngStyle.xs="width:100%;" fxFlex="45" fxFlex.xs="100" hintLabel="Please enter amount">
+          <input matInput disabled formControlName="amount"  maxlength="30" placeholder="Amount" >
+          <span matPrefix>$&nbsp;</span>
+          <span matSuffix>.00</span>
+          <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+        </mat-form-field>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="end center">
+      <button mat-fab class="signUpSubmitBtn">
+          <mat-icon>send</mat-icon>
+      </button>
+  </div>
+</form>

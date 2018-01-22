@@ -1,0 +1,19 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+#familyDetails {
+    h3 {
+        margin: 0;
+    }
+    #addFamily {
+        button {
+            margin-left: 10px;
+        }
+    }
+    #yourFamilyBtn {
+        margin: 10px 10px 20px;
+        button {
+            @include gradient($sign-up-direction, $sign-up-gradientColor);
+            color: $white;
+        }   
+    }
+}

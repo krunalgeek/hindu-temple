@@ -1,0 +1,11 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+#applicantDetails {
+    #yourDetailNextBtn {
+        margin: 0 10px 20px;
+        button {
+            @include gradient($sign-up-direction, $sign-up-gradientColor);
+            color: $white;
+        }   
+    }
+}

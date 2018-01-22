@@ -1,0 +1,9 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+#membershipCardDetails {
+    .signUpSubmitBtn {
+        @include gradient($sign-up-direction, $sign-up-gradientColor);
+        margin: 10px 20px 20px;
+        color: $white;
+    }
+}
