@@ -1,90 +1,113 @@
-<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutAlign.xs="start start">
-  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" maxlength="30" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
-    <input matInput placeholder="First Name" required>
-    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-  </mat-form-field>
+<form id="applicantDetails" [formGroup]="applicantDetail" (ngSubmit)="onSubmit()">
+    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutAlign.xs="start start">
+        <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" maxlength="30" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
+          <input matInput formControlName="firstName" placeholder="First Name" >
+          <mat-error *ngIf="applicantDetail.get('firstName').invalid">Please enter valid Frist Name</mat-error>
+        </mat-form-field>
 
 
-  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
-    <input matInput maxlength="30" placeholder="Last Name" required>
-    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-  </mat-form-field>
+        <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
+          <input matInput maxlength="30" formControlName="lastName" placeholder="Last Name" >
+          <mat-error *ngIf="applicantDetail.get('lastName').invalid">Please enter valid Last Name</mat-error>
+        </mat-form-field>
 
 
-  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Please enter valid Email address.">
-    <input matInput placeholder="Enter your email" required>
-    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-  </mat-form-field>
+        <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Please enter valid Email address.">
+          <input matInput formControlName="email" placeholder="Enter your email" >
+          <mat-error *ngIf="applicantDetail.get('email').invalid">Please enter valid Email</mat-error>
+        </mat-form-field>
 
 
-  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Please enter valid US phone number.">
-    <span matPrefix>+1 &nbsp;</span>
-    <input type="tel" matInput placeholder="Telephone" required>
-    <mat-icon matSuffix>phone</mat-icon>
-    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-  </mat-form-field>
+        <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Please enter valid US phone number.">
+          <span matPrefix>+1 &nbsp;</span>
+          <input type="tel" formControlName="phone" matInput placeholder="Telephone" >
+          <mat-icon matSuffix>phone</mat-icon>
+          <mat-error *ngIf="applicantDetail.get('phone').invalid">Please enter valid US phone number</mat-error>
+        </mat-form-field>
 
-  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100">
-    <input matInput [max]="maxDate" [matDatepicker]="picker" placeholder="Date of birth" required>
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker touchUi="true" #picker></mat-datepicker>
-  </mat-form-field>
+        <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100">
+          <input matInput [max]="maxDate" formControlName="dateOfBirth" [matDatepicker]="picker" placeholder="Date of birth" >
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker touchUi="true" #picker></mat-datepicker>
+        </mat-form-field>
 
+        <div fxLayout="row wrap" ngStyle.xs="width:100%;" fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutAlign.xs="start start" formGroupName="address">
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" maxlength="30" fxFlex.xs="100" hintLabel="US Street address">
+              <input matInput formControlName="addressLine1" placeholder="Address Line 1" >
+              <mat-error *ngIf="applicantDetail.get('address.addressLine1').invalid">Please enter valid address line 1</mat-error>
+            </mat-form-field>
+            
+            
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="APT#">
+              <input matInput formControlName="addressLine2" maxlength="30" placeholder="Address Line 2" >
+            </mat-form-field>
 
-  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" maxlength="30" fxFlex.xs="100" hintLabel="">
-    <input matInput placeholder="Address Line 1" required>
-    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-  </mat-form-field>
-  
-  
-  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="">
-    <input matInput maxlength="30" placeholder="Address Line 2" required>
-    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-  </mat-form-field>
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="30" fxFlex.xs="100" hintLabel="US city">
+              <input matInput formControlName="city" maxlength="30" placeholder="City" >
+              <mat-error *ngIf="applicantDetail.get('address.city').invalid">Please enter valid city</mat-error>
+            </mat-form-field>
 
-  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="">
-    <input matInput maxlength="30" placeholder="City" required>
-    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-  </mat-form-field>
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="30" fxFlex.xs="100" >
+              <mat-select formControlName="state" placeholder="State">
+                <mat-option [value]="'NJ'">
+                  NJ
+                </mat-option>
+                <mat-option [value]="'NC'">
+                  NC
+                </mat-option>
+                <mat-option [value]="'NY'">
+                  NY
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="applicantDetail.get('address.state').invalid">Please select state</mat-error>
+            </mat-form-field>
 
-  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" >
-    <mat-select placeholder="State">
-      <mat-option>
-        NJ
-      </mat-option>
-      <mat-option>
-        NC
-      </mat-option>
-      <mat-option>
-        NY
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="30" fxFlex.xs="100" hintLabel="">
+                <input matInput formControlName="zipCode" maxlength="30" placeholder="Zip Code" >
+                <mat-error *ngIf="applicantDetail.get('address.zipCode').invalid">Please enter valid zipcode</mat-error>
+              </mat-form-field>
+        </div>
+      
+        <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="">
+          <input matInput formControlName="occupation" maxlength="30" placeholder="Occupation" >
+          <mat-error *ngIf="applicantDetail.get('occupation').invalid">Please enter your ocupation</mat-error>
+        </mat-form-field>
 
-  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="">
-    <input matInput maxlength="30" placeholder="Zip Code" required>
-    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-  </mat-form-field>
+        <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="">
+          <input matInput formControlName="samaj" maxlength="30" placeholder="Samaj/Cast" >
+          <mat-error *ngIf="applicantDetail.get('samaj').invalid">Please enter your samaj</mat-error>
+        </mat-form-field>
 
-  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="">
-    <input matInput maxlength="30" placeholder="Occupation" required>
-    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-  </mat-form-field>
+        <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="">
+          <input matInput formControlName="originState" maxlength="30" placeholder="Original state in india" >
+          <mat-error *ngIf="applicantDetail.get('originState').invalid">Please enter your state from india</mat-error>
+        </mat-form-field>
 
-  <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="">
-    <input matInput maxlength="30" placeholder="Original Root" required>
-    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-  </mat-form-field>
+        <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="">
+          <input matInput formControlName="originVillage" maxlength="30" placeholder="Original village in india" >
+          <mat-error *ngIf="applicantDetail.get('originVillage').invalid ">Please enter your Village from india</mat-error>
+        </mat-form-field>
 
-  <div fxFlex="100">Do you want to participate in volunteer work?</div>
-  <mat-radio-group fxFlex="100"> 
-    <mat-radio-button value="1">Yes</mat-radio-button>
-    <mat-radio-button value="2">No</mat-radio-button>
-  </mat-radio-group>  
-
-  <div fxFlex="100">Gender</div>
-  <mat-radio-group fxFlex="100"> 
-    <mat-radio-button value="1">Male</mat-radio-button>
-    <mat-radio-button value="2">Female</mat-radio-button>
-  </mat-radio-group>
-</div>
+        <div fxFlex="100">Do you want to participate in volunteer work?</div>
+        <mat-radio-group formControlName="volunteer" fxFlex="100"> 
+          <mat-radio-button value="yes">Yes</mat-radio-button>
+          <mat-radio-button value="no">No</mat-radio-button>
+        </mat-radio-group>
+        <mat-error *ngIf="applicantDetail.invalid && applicantDetail.get('volunteer').touched">Please choose option</mat-error>
+        <div fxFlex="100" style="height:20px;"></div>
+        <div fxFlex="100">Gender</div>
+        <mat-radio-group formControlName="gender" fxFlex="100"> 
+          <mat-radio-button value="male">Male</mat-radio-button>
+          <mat-radio-button value="female">Female</mat-radio-button>
+        </mat-radio-group>
+        <mat-error *ngIf="applicantDetail.invalid && applicantDetail.get('gender').touched">Please choose option</mat-error>
+    </div>
+    <div id="yourDetailNextBtn" class="text-right">
+      <button fxHide fxHide.xs="false" mat-mini-fab class="xsSignUpButtonBg">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+      <button fxShow fxShow.xs="false" mat-fab class="LgSignUpButtonBg">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+    </div>
+</form>

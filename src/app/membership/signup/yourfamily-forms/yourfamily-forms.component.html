@@ -1,86 +1,81 @@
-<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutAlign.xs="start start">
-    <div fxFlex="100">Is your spouse living currenlty?</div>
-    <mat-radio-group fxFlex="100"> 
-      <mat-radio-button value="1">Yes</mat-radio-button>
-      <mat-radio-button value="2">No</mat-radio-button>
-    </mat-radio-group>  
-
-      <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" maxlength="30" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
-        <input matInput placeholder="First Name" required>
-        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-      </mat-form-field>
-
-
-      <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
-        <input matInput maxlength="30" placeholder="Last Name" required>
-        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-      </mat-form-field>
-
-      <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100">
-        <input matInput [max]="maxDate" [matDatepicker]="picker" placeholder="Date of birth" required>
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker touchUi="true" #picker></mat-datepicker>
-      </mat-form-field>
-
-      <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="">
-        <input matInput maxlength="30" placeholder="Occupation" required>
-        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-      </mat-form-field>
-
-      <div fxFlex="100">Do you have child?</div>
-      <mat-radio-group fxFlex="100"> 
-        <mat-radio-button value="1">Yes</mat-radio-button>
-        <mat-radio-button value="2">No</mat-radio-button>
-      </mat-radio-group>
-
-      <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" maxlength="30" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
-        <input matInput placeholder="First Name" required>
-        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-      </mat-form-field>
-  
-  
-      <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
-        <input matInput maxlength="30" placeholder="Last Name" required>
-        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-      </mat-form-field>
-  
-      <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100">
-        <input matInput [max]="maxDateChild" [matDatepicker]="picker2" placeholder="Date of birth" required>
-        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-        <mat-datepicker touchUi="true" #picker2></mat-datepicker>
-      </mat-form-field>
-  
-      <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
-        <input matInput maxlength="30" placeholder="Last Name" required>
-        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-      </mat-form-field>
+<form id="familyDetails" [formGroup]="family" (ngSubmit)="onSubmit()">
+  <div formArrayName="totalMembers" >
+    <div *ngFor="let member of family.get('totalMembers').controls; let i = index;">
+      <div [formGroupName]="i" fxFlex="100" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutAlign.xs="start start">
+        <div fxFlex="100" fxLayout="row no-wrap" fxLayoutAlign="space-between start">
+            <h3 class="mat-title">Member - {{i + 1}}</h3>
+            <button (click)="removeMember(i)" *ngIf="i > 0" mat-mini-fab color="primary">
+                <mat-icon>remove</mat-icon>
+            </button>
+        </div>
+        
+          <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" maxlength="30" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
+            <input matInput placeholder="First Name" formControlName="firstName" >
+            <mat-error *ngIf="member.get('firstName').invalid">Please enter valid Frist Name</mat-error>
+          </mat-form-field>
       
-      <div fxFlex="100">
-        <button mat-mini-fab>
-          <mat-icon>add</mat-icon>
-        </button> 
-        Add More Child
+          <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
+            <input matInput maxlength="30" placeholder="Last Name" formControlName="lastName" >
+            <mat-error *ngIf="member.get('lastName').invalid">Please enter valid Last Name</mat-error>
+          </mat-form-field>
+        
+          <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100">
+            <input matInput [max]="maxDateChild" [matDatepicker]="picker3"  formControlName="dateOfBirth" placeholder="Date of birth" >
+            <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+            <mat-datepicker touchUi="true" #picker3></mat-datepicker>
+            <mat-error *ngIf="member.get('dateOfBirth').invalid">Please enter valid Date of Birth</mat-error>
+          </mat-form-field>
+        
+          <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
+            <input matInput maxlength="30" placeholder="Ocupation" formControlName="ocupation">
+            <mat-error *ngIf="member.get('ocupation').invalid">Please enter valid occupation</mat-error>
+          </mat-form-field>
+          <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" >
+            <mat-select formControlName="relationship" placeholder="Relationship">
+              <mat-option [value]="''">
+                  Please select
+              </mat-option>
+              <mat-option [value]="'Spouse'">
+                Spouse
+              </mat-option>
+              <mat-option [value]="'Son'">
+                Son
+              </mat-option>
+              <mat-option [value]="'Daughter'">
+                Daughter
+              </mat-option>
+              <mat-option [value]="'Wife'">
+                Wife
+              </mat-option>
+              <mat-option [value]="'Father'">
+                Father
+              </mat-option>
+              <mat-option [value]="'Mother'">
+                Mother
+              </mat-option>
+            </mat-select>
+          <mat-error *ngIf="member.get('relationship').invalid">Please enter choose relationship</mat-error>
+          </mat-form-field>
       </div>
-
-      <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" maxlength="30" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
-          <input matInput placeholder="First Name" required>
-          <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-        </mat-form-field>
-    
-    
-        <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
-          <input matInput maxlength="30" placeholder="Last Name" required>
-          <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-        </mat-form-field>
-    
-        <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100">
-          <input matInput [max]="maxDateChild" [matDatepicker]="picker3" placeholder="Date of birth" required>
-          <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
-          <mat-datepicker touchUi="true" #picker3></mat-datepicker>
-        </mat-form-field>
-    
-        <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
-          <input matInput maxlength="30" placeholder="Last Name" required>
-          <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-        </mat-form-field>
-</div>
+    </div>
+  </div>
+  <div id="addFamily">
+    <button mat-raised-button type="button" (click)="addMember()">
+      <mat-icon>add</mat-icon> Add Family
+    </button> 
+  </div>
+  <div id="yourFamilyBtn" fxLayout="row" fxLayoutAlign="space-between">
+      <button fxHide fxHide.xs="false" mat-mini-fab class="signUpButtonBg">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      <button fxShow fxShow.xs="false" mat-fab class="signUpButtonBg">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      <button fxHide fxHide.xs="false" mat-mini-fab class="signUpButtonBg">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+      <button fxShow fxShow.xs="false" mat-fab class="signUpButtonBg">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+    </div>
+</form>

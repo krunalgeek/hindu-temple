@@ -19,10 +19,6 @@
                     padding: 20px 10px;
                 }
             }
-            .signUpButtonBg {
-                @include gradient($sign-up-direction, $sign-up-gradientColor);
-                margin: 10px;
-            }
         }
     }
 }
