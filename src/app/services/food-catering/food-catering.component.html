@@ -1,3 +1,52 @@
-<p>
-  food-catering works!
-</p>
+<section id="hero-food-catering"  ngStyle.xs="padding-top:74px; height: 250px;" ngStyle.sm="height: 300px;"></section>
+<div class="container">
+    <div id="whitePaperFoodCatering" class="white-paper" ngStyle.xs="margin-top:-60px;"  ngStyle.sm="margin-top:-90px;">
+        <div class="pagetitelcontainer">
+            <div class="titleContent" ngClass.xs="xs-titleContent">
+                <h3 class="page-title" ngClass.xs="xs-page-title">Food Catering</h3>
+            </div>
+        </div>
+        <div class="whitepaperCountainer">
+            <p class="mat-body-1 text-center pageMessage">
+                Orangeburg, South Carolina is the perfect spot for your next wedding event. temple's hall is a short 8 minute drive from the airport and surrounded by various luxury hotels and places to find fine dining and drinking.
+            </p>
+        </div>
+        <div id="cateringFoodSection" fxLayout="row" fxLayoutAlign="space-around">
+          <mat-tab-group fxFlex="80" ngStyle.xs="padding:5px 0;" fxFlex.sm="90" fxFlex.xs="95">
+            <mat-tab>
+              <ng-template mat-tab-label>
+                <div fxLayout="column" fxLayoutAlign="center center">
+                  <mat-icon ngStyle.xs="width:42px; height:42px;" svgIcon="appetizers"></mat-icon>
+                  <h3 class="mat-subheading-1">Appetizers</h3>
+                </div>
+              </ng-template>
+              <div id="appetizers">
+                <app-appetizers></app-appetizers>
+              </div>
+            </mat-tab>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                <div fxLayout="column" fxLayoutAlign="center center">
+                  <mat-icon ngStyle.xs="width:42px; height:42px;" svgIcon="mainCourse"></mat-icon>
+                  <h3 class="mat-subheading-1">Main Dises</h3>
+                </div>
+              </ng-template>
+              <div id="mainCourse">
+                <app-main-dises></app-main-dises>
+              </div>
+            </mat-tab>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                <div fxLayout="column" fxLayoutAlign="center center">
+                  <mat-icon ngStyle.xs="width:42px; height:42px;" svgIcon="submitForm"></mat-icon>
+                  <h3 class="mat-subheading-1">Submit</h3>
+                </div>
+              </ng-template>
+              <div id="submitOrder">
+                <h1>Best pasta restaurants</h1>
+              </div>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div id="mainDishesSection" fxLayout="row wrap" fxLayoutAlign="space-evenly" >
+  <div *ngFor="let hero of HEROES" mat-ripple class="mainDishesContent" ngStyle.xs="width:132px; height:132px;">
+    <div fxLayout="row" fxLayoutAlign="space-between center" >
+      <button class="info" mat-icon-button>
+        <mat-icon>info</mat-icon>
+      </button>
+      <button mat-mini-fab class="addFood">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <img fxShow fxShow.xs="false" src="http://placehold.it/200x200">
+    <img fxHide fxHide.xs="false" src="http://placehold.it/132x132">
+    <div class="mainDishestext">
+      <h2 ngStyle.xs="margin:2px;" class="mat-title">food</h2>
+    </div>
+  </div>
+</div>

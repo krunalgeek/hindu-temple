@@ -15,7 +15,7 @@ const appRoutes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent, data: { state: 'home' } },
     { path: 'priest', component: PriestComponent, data: { state: 'priest' } },
-    { path: 'food-catering', component: PriestComponent, data: { state: 'food-catering' } },
+    { path: 'food-catering', component: FoodCateringComponent, data: { state: 'food-catering' } },
     { path: 'hall-rental', component: HallRentalComponent, data: { state: 'hall-rental' } },
     { path: 'decorations', component: PriestComponent, data: { state: 'decorations' } },
     { path: 'about-us', component: AboutUsComponent, data: { state: 'about-us' } },

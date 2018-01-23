@@ -11,53 +11,52 @@ $blue: #3f51b5;
 ////////////////// Home Page////////////////////////
 $home-red: #FF0467;
 $home-orange: #FC7437;
-$homePageGradient : $home-red 0%, $home-orange 100%;
 $home-direction: -134deg;
-$home-gradientColor : $homePageGradient;
+$home-gradientColor : $home-red 0%, $home-orange 100%;
 $primary-heading-color:#FF0467;
 
 
 ////////////////// Priest Page////////////////////////
 $priest-primary: #f6d365;
 $priest-accent: #fda085;
-$priest-gradient : $priest-primary 0%, $priest-accent 100%;
 $priest-direction: -120deg;
-$priest-gradientColor : $priest-gradient;
+$priest-gradientColor : $priest-primary 0%, $priest-accent 100%;
+
+////////////////// Food Catering Page////////////////////////
+$food-catering-primary: #AC32E4;
+$food-catering-accent: #7918F2;
+$food-catering-direction: -225deg;
+$food-catering-gradientColor : $food-catering-primary 0%, $food-catering-accent 100%;
 
 ////////////////// Hall Rental Page////////////////////////
-$hall-rental-primary: #AC32E4;
-$hall-rental-accent: #7918F2;
-$hall-rental-subprimary: #4801FF;
-$hall-rental-gradient : $hall-rental-primary 0%, $hall-rental-accent 48%, $hall-rental-subprimary 100%;
-$hall-rental-direction: -225deg;
-$hall-rental-gradientColor : $hall-rental-gradient;
+$hall-rental-primary: #5f72bd;
+$hall-rental-accent: #9b23ea;
+$hall-rental-subprimary: rgb(197, 25, 168);
+$hall-rental-direction: to top;
+$hall-rental-gradientColor : $hall-rental-primary 0%, $hall-rental-accent 48%, $hall-rental-subprimary 100%;
 
 ////////////////// About US Page////////////////////////
 $about-us-primary: #a6c0fe;
 $about-us-accent: #f68084;
-$about-us-gradient : $about-us-primary 0%, $about-us-accent 100%;
 $about-us-direction: 120deg;
-$about-us-gradientColor : $about-us-gradient;
+$about-us-gradientColor :  $about-us-primary 0%, $about-us-accent 100%;
 
 ////////////////// Contact US Page////////////////////////
 $contact-us-primary: #89f7fe;
 $contact-us-accent: #66a6ff;
-$contact-us-gradient : $contact-us-primary 0%, $contact-us-accent 100%;
 $contact-us-direction: 120deg;
-$contact-us-gradientColor : $contact-us-gradient;
+$contact-us-gradientColor : $contact-us-primary 0%, $contact-us-accent 100%;
 
 ////////////////// Sign Up Page////////////////////////
 $sign-up-primary: #92fe9d;
 $sign-up-accent: #00c9ff;
-$sign-up-gradient : $sign-up-primary 0%, $sign-up-accent 100%;
 $sign-up-direction: to right;
-$sign-up-gradientColor : $sign-up-gradient;
+$sign-up-gradientColor : $sign-up-primary 0%, $sign-up-accent 100%;
 
 
 ////////////////// Sign In Page////////////////////////
 $sign-in-primary: #3D4E81;
 $sign-in-accent: #5753C9;
 $sign-in-subprimary: #6E7FF3;
-$sign-in-gradient : $sign-in-primary 0%, $sign-in-accent 48%, $sign-in-subprimary 100%;
 $sign-in-direction: -225deg;
-$sign-in-gradientColor : $sign-in-gradient;
+$sign-in-gradientColor : $sign-in-primary 0%, $sign-in-accent 48%, $sign-in-subprimary 100%;

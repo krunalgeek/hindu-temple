@@ -1,0 +1,41 @@
+@import '~sass/_mixins';
+@import '~sass/_variables';
+/* COLOR VARIABLES
+============================================= */
+#hero-food-catering {
+    padding-top: 112px;
+    height: 400px;
+    @include gradient($food-catering-direction, $food-catering-gradientColor);
+}
+#whitePaperFoodCatering.white-paper {
+    .pagetitelcontainer {
+        .titleContent {
+            @include gradient($food-catering-direction, $food-catering-gradientColor);
+        }
+    }
+    .whitepaperCountainer {
+        p.pageMessage {
+            margin:0 auto;
+            max-width: 700px;
+        }
+        mat-card {
+            width: 260px;
+            height: 180px;
+            padding: 0;
+            margin: 20px auto;
+            @include mat-elevation(12);
+        }
+        padding: 0 15px 15px 15px;
+    }
+    #cateringFoodSection {
+        mat-tab-group  {
+            padding: 10px;
+            @include mat-elevation(8);
+            mat-tab-header {
+                .mat-tab-label{
+                    height: 112px;
+                }
+            }
+        }
+    }
+}
