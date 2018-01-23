@@ -1,0 +1,42 @@
+@import '~sass/_mixins';
+@import '~sass/_variables';
+/* COLOR VARIABLES
+============================================= */
+#mainDishesSection {
+    margin-top: 10px;
+    .mainDishesContent {
+        width:200px; 
+        height:200px;
+        margin-bottom:10px;
+        position: relative;
+        .info, .addFood {
+            color: white;
+            margin: 5px 5px 0;
+            z-index: 2;
+        }
+        img {
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .mainDishestext {
+            background: rgba(0, 0, 0, 0.51);
+            @include mat-elevation(9);
+            position: absolute;
+            justify-content: center;
+            align-content: center;
+            display: flex;
+            bottom: 0;
+            width: 100%;
+            z-index: 2;
+            left: 0;
+            right: 0;
+            h2.mat-title {
+                margin: 5px;
+                color: $white;
+            }
+        }
+    }
+}

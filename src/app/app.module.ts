@@ -40,6 +40,9 @@ import { HallRentalFormComponent } from './services/hall-rental/hall-rental-form
 import { ContactFormComponent } from './contact-us/contact-form/contact-form.component';
 import { SigninComponent } from './membership/signin/signin.component';
 import { SigninFormComponent } from './membership/signin/signin-form/signin-form.component';
+import { AppetizersComponent } from './services/food-catering/appetizers/appetizers.component';
+import { MainDisesComponent } from './services/food-catering/main-dises/main-dises.component';
+import { FoodOrderComponent } from './services/food-catering/food-order/food-order.component';
 
 
 
@@ -76,6 +79,9 @@ import { SigninFormComponent } from './membership/signin/signin-form/signin-form
     ContactFormComponent,
     SigninComponent,
     SigninFormComponent,
+    AppetizersComponent,
+    MainDisesComponent,
+    FoodOrderComponent,
   ],
   imports: [
     BrowserModule,

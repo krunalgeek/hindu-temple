@@ -29,8 +29,4 @@ export class MembershipPaymentFormsComponent implements OnInit {
   onSubmit() {
     console.log(this.cardDetail);
   }
-
- 
-
-  
 }

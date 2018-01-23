@@ -125,6 +125,16 @@ mat-sidenav-container.hall-rental {
     
 }
 
+//food catering Page
+mat-sidenav-container.food-catering {
+    header mat-toolbar.mat-toolbar.navIsFixed,
+    footer #appFooter,
+    footer .mbALlLinks  mat-expansion-panel {
+        @include gradient($food-catering-direction, $food-catering-gradientColor);
+    }
+    
+}
+
 //About US Page
 mat-sidenav-container.about-us {
     header mat-toolbar.mat-toolbar.navIsFixed,
@@ -201,6 +211,44 @@ mat-sidenav-container.sign-in {
                 &.xs-page-title {
                     font-size: 32px;
                 }
+            }
+        }
+    }
+}
+
+/**************************************
+// over-write style on tab*************
+**************************************/
+#cateringFoodSection {
+    mat-tab-group  {
+        mat-tab-header {
+            .mat-tab-labels {
+                justify-content: center;
+                align-content: center;
+                .mat-tab-label{
+                    height: 112px;
+                    @media screen and (max-width: 599px) {
+                        height: 92px;
+                    }
+                    mat-icon {
+                        width: 72px;
+                        height: 72px;
+                    }
+                    &.mat-tab-label-active {
+                        mat-icon {
+                            svg {
+                                fill:#7919f2;
+                            }
+                        }
+                        h3 {
+                            color: #7919f2
+                        }
+                    }
+                }
+                
+            }
+            .mat-ink-bar {
+                background-color:#7919f2;
             }
         }
     }
