@@ -1,3 +1,67 @@
-<p>
-  food-order works!
-</p>
+<form id="foodCateringDetails" fxLayout="row" fxLayoutAlign="space-around"  [formGroup]="cateringOrderDetail" (ngSubmit)="onSubmit()">
+    <div fxLayout="row wrap" fxFlex="80" fxFlex.xs="90" fxLayoutAlign="space-between start" fxLayoutAlign.xs="start start">
+        <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" maxlength="30" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
+          <input matInput formControlName="firstName" placeholder="First Name" >
+          <mat-error *ngIf="cateringOrderDetail.get('firstName').invalid">Please enter valid Frist Name</mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Number and Sign not allowed">
+          <input matInput maxlength="30" formControlName="lastName" placeholder="Last Name" >
+          <mat-error *ngIf="cateringOrderDetail.get('lastName').invalid">Please enter valid Last Name</mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Please enter valid Email address.">
+          <input matInput formControlName="email" placeholder="Enter your email" >
+          <mat-error *ngIf="cateringOrderDetail.get('email').invalid">Please enter valid Email</mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="Please enter valid US phone number.">
+          <span matPrefix>+1 &nbsp;</span>
+          <input type="tel" formControlName="phone" matInput placeholder="Telephone" >
+          <mat-icon matSuffix>phone</mat-icon>
+          <mat-error *ngIf="cateringOrderDetail.get('phone').invalid">Please enter valid US phone number</mat-error>
+        </mat-form-field>
+
+
+
+        <div fxLayout="row wrap" ngStyle.xs="width:100%;" fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutAlign.xs="start start" formGroupName="address">
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" maxlength="30" fxFlex.xs="100" hintLabel="US Street address">
+              <input matInput formControlName="addressLine1" placeholder="Address Line 1" >
+              <mat-error *ngIf="cateringOrderDetail.get('address.addressLine1').invalid">Please enter valid address line 1</mat-error>
+            </mat-form-field>
+            
+            
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="47" fxFlex.xs="100" hintLabel="APT#">
+              <input matInput formControlName="addressLine2" maxlength="30" placeholder="Address Line 2" >
+            </mat-form-field>
+
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="30" fxFlex.xs="100" hintLabel="US city">
+              <input matInput formControlName="city" maxlength="30" placeholder="City" >
+              <mat-error *ngIf="cateringOrderDetail.get('address.city').invalid">Please enter valid city</mat-error>
+            </mat-form-field>
+
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="30" fxFlex.xs="100" >
+              <mat-select formControlName="state" placeholder="State">
+                <mat-option [value]="'NJ'">
+                  NJ
+                </mat-option>
+                <mat-option [value]="'NC'">
+                  NC
+                </mat-option>
+                <mat-option [value]="'NY'">
+                  NY
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="cateringOrderDetail.get('address.state').invalid">Please select state</mat-error>
+            </mat-form-field>
+
+            <mat-form-field ngStyle.xs="width:100%;" fxFlex="30" fxFlex.xs="100" hintLabel="">
+                <input matInput formControlName="zipCode" maxlength="30" placeholder="Zip Code" >
+                <mat-error *ngIf="cateringOrderDetail.get('address.zipCode').invalid">Please enter valid zipcode</mat-error>
+              </mat-form-field>
+        </div>
+    </div>
+</form>
