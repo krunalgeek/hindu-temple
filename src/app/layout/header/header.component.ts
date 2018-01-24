@@ -1,5 +1,4 @@
 import { Component, OnInit, Inject, OnDestroy} from '@angular/core';
-import { PageEvent } from '@angular/material';
 import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({

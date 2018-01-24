@@ -1,0 +1,13 @@
+<mat-toolbar [ngStyle.lt-sm]="{'height': '74px'}" [ngClass]="{'navIsFixed' : navIsFixed}">
+  <div class="container" fxLayout="row" fxLayoutAlign="start center">
+      <div id="temple-logo" >
+        <img src="../assets/temple-logo.png" ngStyle.lt-md="width: 62px; height: 62px; margin-top:0;">
+      </div>
+      <div id="navigation"  fxHide fxHide.gt-xs="false">
+          <nav>
+              <app-nav-bar>
+              </app-nav-bar>
+          </nav>
+      </div>
+  </div>
+</mat-toolbar>

@@ -1,16 +1,20 @@
-<app-burger-menu></app-burger-menu>
+<div>
+  <router-outlet name="burger-menu"></router-outlet>
+</div>
 <mat-sidenav-container [className]="o.activatedRouteData.state" fxFlex fxFlexFill>
     <mat-sidenav #sidenav mode="over" disableClose>
-      <app-sidenav></app-sidenav>
+      <router-outlet name="sidenav"></router-outlet>
     </mat-sidenav>
     <mat-sidenav-content fxLayout="column" fxLayoutAlign="space-between stretch" fxFlexFill>
-      <app-header ></app-header>
+      <header>
+        <router-outlet name="header"></router-outlet>
+      </header>
       <main role="main"  [@routerTransition]="getState(o)" style="min-height:20vh;">
         <router-outlet #o="outlet">
         </router-outlet>
       </main>
       <footer>
-        <app-footer></app-footer>
+        <router-outlet name="footer"></router-outlet>
       </footer>
     </mat-sidenav-content>
 </mat-sidenav-container>
