@@ -6,13 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { NavBarComponent } from './shared/header/nav-bar/nav-bar.component';
-import { FooterComponent } from './shared/footer/footer.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { HeaderComponent } from './shared/header/header.component';
-import { SidenavComponent } from './shared/header/sidenav/sidenav.component';
 import { HeroHomeComponent } from './home/hero-home/hero-home.component';
-import { BurgerMenuComponent } from './shared/burger-menu/burger-menu.component';
+
 import { NgxCarouselModule } from 'ngx-carousel';
 import { CarouselComponent } from './home/hero-home/carousel/carousel.component';
 import { UpcomingEventsComponent } from './home/upcoming-events/upcoming-events.component';
@@ -23,12 +19,10 @@ import { ListOfBodComponent } from './home/list-of-bod/list-of-bod.component';
 import { MobileAppDownloadComponent } from './home/mobile-app-download/mobile-app-download.component';
 import { PriestComponent } from './services/priest/priest.component';
 import { FoodCateringComponent } from './services/food-catering/food-catering.component';
-import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { HallRentalComponent } from './services/hall-rental/hall-rental.component';
 import { DocorationsComponent } from './services/docorations/docorations.component';
 import { AppRouting } from './app.router';
 import { PriestServiceListComponent } from './services/priest/priest-service-list/priest-service-list.component';
-import { SidenavService } from './shared/header/sidenav/sidenav.service';
 import { AboutUsComponent } from './about-us/about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SignupComponent } from './membership/signup/signup.component';
@@ -44,18 +38,15 @@ import { AppetizersComponent } from './services/food-catering/appetizers/appetiz
 import { MainDisesComponent } from './services/food-catering/main-dises/main-dises.component';
 import { FoodOrderComponent } from './services/food-catering/food-order/food-order.component';
 
+import { SharedModule } from './shared/shared.module';
+import { LayoutModule } from './layout/layout.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavBarComponent,
-    FooterComponent,
-    HeaderComponent,
-    SidenavComponent,
     HeroHomeComponent,
-    BurgerMenuComponent,
     CarouselComponent,
     UpcomingEventsComponent,
     OurServicesComponent,
@@ -64,7 +55,6 @@ import { FoodOrderComponent } from './services/food-catering/food-order/food-ord
     MobileAppDownloadComponent,
     PriestComponent,
     FoodCateringComponent,
-    NotFoundComponent,
     HallRentalComponent,
     DocorationsComponent,
     PriestServiceListComponent,
@@ -92,11 +82,10 @@ import { FoodOrderComponent } from './services/food-catering/food-order/food-ord
     FlexLayoutModule,
     NgxCarouselModule,
     HttpClientModule,
-    AppRouting
+    AppRouting,
+    LayoutModule
   ],
-  providers: [
-    SidenavService,
-  ],
+  providers: [],
   bootstrap: [
     AppComponent
   ],

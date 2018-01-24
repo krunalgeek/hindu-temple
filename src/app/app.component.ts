@@ -1,9 +1,8 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { MatSidenav } from '@angular/material';
 import { routerTransition } from './app.router.animations';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
-
-import { SidenavService } from './shared/header/sidenav/sidenav.service';
+import { SidenavService } from './layout/sidenav/sidenav.service';
 
 @Component({
   selector: 'app-root',
@@ -12,11 +11,11 @@ import { SidenavService } from './shared/header/sidenav/sidenav.service';
   animations: [ routerTransition],
   providers: [SidenavService]
 })
-export class AppComponent {
-  @ViewChild('sidenav') public sidenav:MatSidenav;
-  pageClass:String = "home";
+export class AppComponent implements OnInit {
+  @ViewChild('sidenav') public sidenav: MatSidenav;
+  pageClass: String = 'home';
   constructor(
-    private router: Router, 
+    private router: Router,
     private sidenavService: SidenavService
   ) {
   }

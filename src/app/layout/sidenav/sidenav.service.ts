@@ -1,6 +1,5 @@
 import { Injectable, } from '@angular/core';
 import { MatSidenav } from '@angular/material';
-import { Observable,Subject } from 'rxjs/Rx';
 
 @Injectable()
 export class SidenavService {

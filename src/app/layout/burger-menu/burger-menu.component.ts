@@ -1,5 +1,5 @@
 import { Component, OnInit, Output,  EventEmitter} from '@angular/core';
-import { SidenavService } from '../header/sidenav/sidenav.service';
+import { SidenavService } from '../sidenav/sidenav.service';
 import { NavigationStart, Router } from '@angular/router';
 
 @Component({
@@ -21,7 +21,6 @@ export class BurgerMenuComponent implements OnInit {
         }
       });
   }
-  
   ngOnInit() {
   }
   public sidenavToggle() {
