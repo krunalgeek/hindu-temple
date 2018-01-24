@@ -12,10 +12,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { PriestComponent } from './services/priest/priest.component';
+
 import { FoodCateringComponent } from './services/food-catering/food-catering.component';
 import { HallRentalComponent } from './services/hall-rental/hall-rental.component';
-import { DocorationsComponent } from './services/docorations/docorations.component';
 import { AppRouting } from './app.router';
 import { PriestServiceListComponent } from './services/priest/priest-service-list/priest-service-list.component';
 
@@ -23,7 +22,6 @@ import { SignupComponent } from './membership/signup/signup.component';
 import { YourdetailFormsComponent } from './membership/signup/yourdetail-forms/yourdetail-forms.component';
 import { YourfamilyFormsComponent } from './membership/signup/yourfamily-forms/yourfamily-forms.component';
 import { MembershipPaymentFormsComponent } from './membership/signup/membership-payment-forms/membership-payment-forms.component';
-import { PriestFormComponent } from './services/priest/priest-form/priest-form.component';
 import { HallRentalFormComponent } from './services/hall-rental/hall-rental-form/hall-rental-form.component';
 
 import { SigninComponent } from './membership/signin/signin.component';
@@ -38,20 +36,17 @@ import { LayoutModule } from './layout/layout.module';
 import { HomeModule } from './home/home.module';
 import { AboutUsModule } from './about-us/about-us.module';
 import { ContactUsModule } from './contact-us/contact-us.module';
+import { ServicesModule } from './services/services.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PriestComponent,
     FoodCateringComponent,
     HallRentalComponent,
-    DocorationsComponent,
-    PriestServiceListComponent,
     SignupComponent,
     YourdetailFormsComponent,
     YourfamilyFormsComponent,
     MembershipPaymentFormsComponent,
-    PriestFormComponent,
     HallRentalFormComponent,
     SigninComponent,
     SigninFormComponent,
@@ -72,6 +67,7 @@ import { ContactUsModule } from './contact-us/contact-us.module';
     HomeModule,
     AboutUsModule,
     ContactUsModule,
+    ServicesModule,
   ],
   providers: [],
   bootstrap: [

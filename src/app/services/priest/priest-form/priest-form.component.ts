@@ -18,6 +18,6 @@ export class PriestFormComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     this.priestService = form.value;
-    console.log("form this submitting", this.priestService);
+    console.log('form this submitting', this.priestService);
   }
 }
