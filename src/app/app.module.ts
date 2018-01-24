@@ -5,18 +5,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { HeroHomeComponent } from './home/hero-home/hero-home.component';
 
-import { NgxCarouselModule } from 'ngx-carousel';
-import { CarouselComponent } from './home/hero-home/carousel/carousel.component';
-import { UpcomingEventsComponent } from './home/upcoming-events/upcoming-events.component';
-import { OurServicesComponent } from './home/our-services/our-services.component';
-import { GalleryComponent } from './home/gallery/gallery.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
+
 import { HttpClientModule } from '@angular/common/http';
-import { ListOfBodComponent } from './home/list-of-bod/list-of-bod.component';
-import { MobileAppDownloadComponent } from './home/mobile-app-download/mobile-app-download.component';
+
 import { PriestComponent } from './services/priest/priest.component';
 import { FoodCateringComponent } from './services/food-catering/food-catering.component';
 import { HallRentalComponent } from './services/hall-rental/hall-rental.component';
@@ -41,18 +36,12 @@ import { FoodOrderComponent } from './services/food-catering/food-order/food-ord
 import { SharedModule } from './shared/shared.module';
 import { LayoutModule } from './layout/layout.module';
 
+import { HomeModule } from './home/home.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    HeroHomeComponent,
-    CarouselComponent,
-    UpcomingEventsComponent,
-    OurServicesComponent,
-    GalleryComponent,
-    ListOfBodComponent,
-    MobileAppDownloadComponent,
     PriestComponent,
     FoodCateringComponent,
     HallRentalComponent,
@@ -80,10 +69,10 @@ import { LayoutModule } from './layout/layout.module';
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    NgxCarouselModule,
     HttpClientModule,
     AppRouting,
-    LayoutModule
+    LayoutModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [
