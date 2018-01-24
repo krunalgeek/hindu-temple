@@ -3,7 +3,6 @@ import { PriestComponent } from './services/priest/priest.component';
 import { FoodCateringComponent } from './services/food-catering/food-catering.component';
 import { HallRentalComponent } from './services/hall-rental/hall-rental.component';
 import { DocorationsComponent } from './services/docorations/docorations.component';
-import { AboutUsComponent } from './about-us/about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SignupComponent } from './membership/signup/signup.component';
 import { SigninComponent } from './membership/signin/signin.component';
@@ -15,8 +14,6 @@ const appRoutes = [
     { path: 'food-catering', component: FoodCateringComponent, data: { state: 'food-catering' } },
     { path: 'hall-rental', component: HallRentalComponent, data: { state: 'hall-rental' } },
     { path: 'decorations', component: PriestComponent, data: { state: 'decorations' } },
-    { path: 'about-us', component: AboutUsComponent, data: { state: 'about-us' } },
-    { path: 'contact-us', component: ContactUsComponent, data: { state: 'contact-us' } },
     { path: 'sign-up', component: SignupComponent, data: { state: 'sign-up' } },
     { path: 'sign-in', component: SigninComponent, data: { state: 'sign-in' } },
     { path: '**', redirectTo: 'home' }
