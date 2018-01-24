@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, HostListener, ElementRef} from '@angular/core';
+import { Component, OnInit, Inject, OnDestroy} from '@angular/core';
 import { PageEvent } from '@angular/material';
 import { DOCUMENT } from '@angular/platform-browser';
 
@@ -7,11 +7,11 @@ import { DOCUMENT } from '@angular/platform-browser';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
-  constructor(@Inject(DOCUMENT) private document: any, public el: ElementRef) { }
+export class HeaderComponent implements OnInit, OnDestroy {
+  constructor(@Inject(DOCUMENT) private document: any) { }
   navIsFixed: boolean;
   ngOnInit() {
-    window.addEventListener('scroll', this.scroll, true); //third parameter
+    window.addEventListener('scroll', this.scroll, true);
   }
 
   ngOnDestroy() {
@@ -19,13 +19,13 @@ export class HeaderComponent implements OnInit {
   }
 
   scroll = (): void => {
-    const targetPos = this.document.querySelector('.mat-sidenav-content').scrollTop;
-    if(targetPos > 2) {
+    const targetPos = window.pageYOffset || window.document.documentElement.scrollTop || window.document.body.scrollTop || 0;
+    if (targetPos > 2) {
       this.navIsFixed = true;
     } else {
       this.navIsFixed = false;
     }
-  };
+  }
 }
 
 
