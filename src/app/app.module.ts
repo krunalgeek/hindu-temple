@@ -1,13 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material/material.module';
+import { MaterialModule } from './shared/material/material.module';
 import { AppComponent } from './app.component';
-
 import { FlexLayoutModule } from '@angular/flex-layout';
-
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRouting } from './app.router';
@@ -41,8 +37,6 @@ import { ServicesModule } from './services/services.module';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
