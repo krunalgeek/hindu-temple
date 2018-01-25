@@ -13,7 +13,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 
 
-import { FoodCateringComponent } from './services/food-catering/food-catering.component';
+
 import { HallRentalComponent } from './services/hall-rental/hall-rental.component';
 import { AppRouting } from './app.router';
 import { PriestServiceListComponent } from './services/priest/priest-service-list/priest-service-list.component';
@@ -26,9 +26,6 @@ import { HallRentalFormComponent } from './services/hall-rental/hall-rental-form
 
 import { SigninComponent } from './membership/signin/signin.component';
 import { SigninFormComponent } from './membership/signin/signin-form/signin-form.component';
-import { AppetizersComponent } from './services/food-catering/appetizers/appetizers.component';
-import { MainDisesComponent } from './services/food-catering/main-dises/main-dises.component';
-import { FoodOrderComponent } from './services/food-catering/food-order/food-order.component';
 
 import { SharedModule } from './shared/shared.module';
 import { LayoutModule } from './layout/layout.module';
@@ -41,7 +38,6 @@ import { ServicesModule } from './services/services.module';
 @NgModule({
   declarations: [
     AppComponent,
-    FoodCateringComponent,
     HallRentalComponent,
     SignupComponent,
     YourdetailFormsComponent,
@@ -50,9 +46,6 @@ import { ServicesModule } from './services/services.module';
     HallRentalFormComponent,
     SigninComponent,
     SigninFormComponent,
-    AppetizersComponent,
-    MainDisesComponent,
-    FoodOrderComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +60,7 @@ import { ServicesModule } from './services/services.module';
     HomeModule,
     AboutUsModule,
     ContactUsModule,
-    ServicesModule,
+    ServicesModule
   ],
   providers: [],
   bootstrap: [
