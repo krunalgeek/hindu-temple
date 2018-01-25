@@ -8,13 +8,8 @@ import { AppComponent } from './app.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-
-
 import { HttpClientModule } from '@angular/common/http';
 
-
-
-import { HallRentalComponent } from './services/hall-rental/hall-rental.component';
 import { AppRouting } from './app.router';
 import { PriestServiceListComponent } from './services/priest/priest-service-list/priest-service-list.component';
 
@@ -22,7 +17,6 @@ import { SignupComponent } from './membership/signup/signup.component';
 import { YourdetailFormsComponent } from './membership/signup/yourdetail-forms/yourdetail-forms.component';
 import { YourfamilyFormsComponent } from './membership/signup/yourfamily-forms/yourfamily-forms.component';
 import { MembershipPaymentFormsComponent } from './membership/signup/membership-payment-forms/membership-payment-forms.component';
-import { HallRentalFormComponent } from './services/hall-rental/hall-rental-form/hall-rental-form.component';
 
 import { SigninComponent } from './membership/signin/signin.component';
 import { SigninFormComponent } from './membership/signin/signin-form/signin-form.component';
@@ -38,12 +32,10 @@ import { ServicesModule } from './services/services.module';
 @NgModule({
   declarations: [
     AppComponent,
-    HallRentalComponent,
     SignupComponent,
     YourdetailFormsComponent,
     YourfamilyFormsComponent,
     MembershipPaymentFormsComponent,
-    HallRentalFormComponent,
     SigninComponent,
     SigninFormComponent,
   ],
