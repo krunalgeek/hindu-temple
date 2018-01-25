@@ -8,13 +8,13 @@ import { HallRentalReqest } from './hall-rental-request';
 })
 export class HallRentalFormComponent implements OnInit {
   minDate = new Date();
-  hallRentalRequest:HallRentalReqest; 
+  hallRentalRequest: HallRentalReqest;
   constructor() { }
 
   ngOnInit() {
   }
   onSubmit(form: NgForm) {
     this.hallRentalRequest = form.value;
-    console.log("form this submitting", this.hallRentalRequest);
+    console.log('form this submitting', this.hallRentalRequest);
   }
 }
