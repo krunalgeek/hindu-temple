@@ -8,7 +8,7 @@ import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
-import { MaterialModule } from '../material/material.module';
+import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({

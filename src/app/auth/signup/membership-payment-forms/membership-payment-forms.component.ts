@@ -7,9 +7,9 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
   styleUrls: ['./membership-payment-forms.component.scss']
 })
 export class MembershipPaymentFormsComponent implements OnInit {
-  cardDetail:FormGroup;
+  cardDetail: FormGroup;
   constructor() { }
-  
+
   ngOnInit() {
     this.cardDetail =  new FormGroup({
       'cardNumber': new FormControl(null, [Validators.required, Validators.pattern('^\d{16}$')]),

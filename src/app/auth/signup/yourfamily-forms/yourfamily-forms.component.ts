@@ -12,8 +12,8 @@ export class YourfamilyFormsComponent implements OnInit {
   maxDateChild = new Date();
   constructor() { }
 
-  get getMember() { 
-    return <FormArray>this.family.get("totalMembers"); 
+  get getMember() {
+    return <FormArray>this.family.get('totalMembers');
   }
 
   ngOnInit() {
@@ -34,12 +34,12 @@ export class YourfamilyFormsComponent implements OnInit {
       'phone': new FormControl(null, [Validators.required, Validators.pattern('^\d{10}$')]),
       'dateOfBirth': new FormControl(null, Validators.required),
       'ocupation': new FormControl(null , Validators.required),
-      'relationship': new FormControl("male" , Validators.required),
-    })
+      'relationship': new FormControl('male', Validators.required),
+    });
   }
   onSubmit() {
     this.family.value.noOfFamilyMebmbers = this.family.value.noOfFamilyMebmbers.totalMembers.length;
-    console.log("ehllo", this.family.value);
+    console.log('ehllo', this.family.value);
   }
   addMember() {
     const control = <FormArray>this.family.controls['totalMembers'];
