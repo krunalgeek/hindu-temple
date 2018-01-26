@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "nodemon server.js --exec babel-node --presets es2015,stage-2",
+    "start": "nodemon server.js ./node_modules/.bin/babel-node  main.es6",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
