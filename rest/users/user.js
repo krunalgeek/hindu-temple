@@ -11,7 +11,6 @@ router.post('/login', (req, res, next) => {
   const { email, password } = req.body;
   User.findOne({ 'personalDetail.email': email }, (err, user) => {
     if (!user) return next(err);
-    console.log('userrrrr', user);
     user.comparePassword(password, (passwordError, isMatch) => {
       if (!isMatch) return next(passwordError);
 
