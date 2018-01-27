@@ -7,6 +7,7 @@ import config from './config';
 import morgan from 'morgan';
 import chalk from 'chalk';
 import compression from 'compression';
+import routes from './rest';
 
 const app = express();
 
@@ -23,6 +24,10 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static(distDir));
 }
 
+/**
+ * @name REST
+ */
+app.use('/api', routes);
 
 /**
  * @name server
