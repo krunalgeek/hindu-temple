@@ -18,7 +18,9 @@ const userSchema = Schema({
     },
     email: {
       type: String,
-      index: {unique: true},
+      index: {
+        unique: true
+      },
       required: true
     },
     gender: {
@@ -39,7 +41,7 @@ const userSchema = Schema({
     },
     dateOfBirth: {
       type: Date,
-      required : true
+      required: true
     },
     address: {
       addressLine1: {
@@ -87,53 +89,61 @@ const userSchema = Schema({
   },
   familyDetail: {
     type: Array
+  },
+  membership: {
+    type: {
+      type: String,
+      required: true
+    },
+    amount: {
+      type: Number,
+      required: true
+    }
   }
 });
 
 const familyMember = Schema({
-        firstName: {
-        type: String,
-        required: true
-      },
-      lastName: {
-        type: String,
-        required: true
-      },
-      dateOfBirth: {
-        type: Date,
-        required: false
-      },
-      occupation: {
-        type: String,
-        required: false
-      },
-      relationship: {
-        type: String,
-        required: true
-      }
-    });
+  firstName: {
+    type: String,
+    required: true
+  },
+  lastName: {
+    type: String,
+    required: true
+  },
+  dateOfBirth: {
+    type: Date,
+    required: false
+  },
+  occupation: {
+    type: String,
+    required: false
+  },
+  relationship: {
+    type: String,
+    required: true
+  }
+});
 /**
  * @name user
  */
 userSchema.pre('save', function (next) {
   const user = this;
-
-  if (!user.isModified('password')) return next();
-
+  if (!user.isModified('personalDetail.password')) return next();
   bcrypt.genSalt(10, (err, salt) => {
     if (err) return next(err);
-
-    bcrypt.hash(user.password, salt, (error, hash) => {
+    bcrypt.hash(user.personalDetail.password, salt, (error, hash) => {
       if (error) return next(error);
-
-      user.password = hash;
+      user.personalDetail.password = hash;
       next();
     });
   });
 });
 
 userSchema.methods.comparePassword = (candidatePassword, callback) => {
-  bcrypt.compare(candidatePassword, this.password, (err, isMatch) => {
+  const user = this;
+  console.log('this......', this);
+  bcrypt.compare(candidatePassword, user.personalDetail.password, (err, isMatch) => {
     if (err) return callback(err);
     callback(null, isMatch);
   });

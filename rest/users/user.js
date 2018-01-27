@@ -7,15 +7,19 @@ import { User } from './user-schema';
 const router = Router();
 
 router.post('/login', (req, res, next) => {
+
   const { email, password } = req.body;
-
-  User.findOne({ email }, (err, user) => {
+  User.findOne({ 'personalDetail.email': email }, (err, user) => {
     if (!user) return next(err);
-
+    console.log('userrrrr', user);
     user.comparePassword(password, (passwordError, isMatch) => {
       if (!isMatch) return next(passwordError);
 
-      const token = jwt.sign({ user }, SECRET);
+      const token = jwt.sign({
+        email: user.personalDetail.email,
+        password : user.personalDetail.password,
+        firstName: user.personalDetail.name.firstName,
+        lastName: user.personalDetail.name.lastName }, SECRET);
       res.json({ token });
     });
   });

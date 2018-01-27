@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../src/app/services/priest/index.js"],"names":["PriestServiceListComponent","PriestFormComponent"],"mappings":";;;;;;;;;;;0BAASA,0B;;;;;;;;;uBACAC,mB","file":"index.js","sourcesContent":["export { PriestServiceListComponent } from './priest-service';\nexport { PriestFormComponent } from './priest-form';"]}
