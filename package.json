@@ -5,6 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "nodemon server.js --exec babel-node --presets es2015,stage-2",
+    "compile": "babel src --out-dir .compiled --source-maps --watch",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

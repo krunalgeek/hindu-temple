@@ -7,7 +7,7 @@ import { SignupComponent } from './index';
     imports: [
         RouterModule.forChild([
             {
-                path: 'sing-up',
+                path: 'sign-up',
                 component: SignupComponent,
                 data: { state: 'sign-up' }
             },
