@@ -140,10 +140,9 @@ userSchema.pre('save', function (next) {
   });
 });
 
-userSchema.methods.comparePassword = (candidatePassword, callback) => {
+userSchema.methods.comparePassword = function(candidatePassword, callback) {
   const user = this;
-  console.log('this......', this);
-  bcrypt.compare(candidatePassword, user.personalDetail.password, (err, isMatch) => {
+  bcrypt.compare(candidatePassword, this.personalDetail.password, (err, isMatch) => {
     if (err) return callback(err);
     callback(null, isMatch);
   });
