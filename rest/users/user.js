@@ -1,8 +1,9 @@
 import { Router } from 'express';
 import jwt from 'jsonwebtoken';
-
-const SECRET="ramrakhetenekonchakhe";
+import config from '../../config';
 import { User } from './user-schema';
+
+const SECRET = config.MONGODB_URI;
 
 const router = Router();
 
